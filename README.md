@@ -34,11 +34,11 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :appoints
+- has_many :appointments
 - has_many :checks
 - has_one :comment
 
-## appoints テーブル
+## appointments テーブル
 | Column               | Type       | Options                        |
 | -------------------- | ---------- | -----------                    |
 | company              | string     | null: false                    |
@@ -84,7 +84,7 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :appoint
+- belongs_to :appointments
 - belongs_to :user
 
 # commentsテーブル
@@ -96,5 +96,5 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :appoint
+- belongs_to :appointments
 - belongs_to :user
