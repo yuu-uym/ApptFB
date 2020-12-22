@@ -1,0 +1,15 @@
+.footer {
+  background-color: #7fbfff;
+  width: 100vw;
+  height: 40px;
+}
+
+.footer .inner {
+  padding: 10px;
+}
+
+.copyright {
+  font-size: 1vmin;
+  text-align: center;
+  color: #333;
+}

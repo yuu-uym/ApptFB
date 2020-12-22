@@ -1,0 +1,60 @@
+.main{
+  height: calc(100vh- 8vh - 100px);
+  padding: 50px 0 0 0;
+}
+
+
+/* トップページ上部 */
+.title-contents{
+  width: 100vw;
+  height: 25vh;
+  background-size: cover;
+}
+
+.service-title{
+  font-size: 5vmin;
+  text-align: center;
+}
+
+.service-explanation{
+  font-size: 3vmin ;
+  text-align: center;
+}
+/* トップページ上部 */
+
+/* トップページ中段 */
+.how-to{
+  width: 100vw;
+  height: 25vh;
+  background-size: cover;
+}
+
+.how-to-title{
+  font-size: 5vmin;
+  text-align: center;
+}
+
+.how-to-explanation{
+  font-size: 3vmin ;
+  text-align: center;
+}
+/* トップページ中段 */
+
+/* トップページ下段 */
+.using{
+  width: 100vw;
+  height: 25vh;
+  background-size: cover;
+}
+
+.heading{
+  font-size: 5vmin;
+  text-align: center;
+}
+
+.explanation{
+  font-size: 3vmin ;
+  text-align: center;
+}
+/* トップページ下段 */
+
