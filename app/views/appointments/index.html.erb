@@ -1,2 +1,45 @@
-<h1>Appointments#index</h1>
-<p>Find me in app/views/appointments/index.html.erb</p>
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <%# 画面上部の「アプリの概要説明」帯部分 %>
+  <div class='title-contents'>
+    <br><h2 class='service-title'>〜アポ振り返りツール〜</h2>
+    <p class='service-explanation'>
+      <br>アプリの説明
+      <br>アプリの説明
+      <br>アプリの説明
+      <br>アプリの説明
+    </p>
+  </div>
+  <%# /画面上部の「アプリの概要説明」帯部分  %>
+
+  <%# アプリの使い方 %>
+  <div class='how-to'>
+    <br><h2 class='how-to-title'>〜このアプリでできること〜</h2>
+    <p class='how-to-explanation'>
+      <br>アプリの使い方
+      <br>アプリの使い方
+      <br>アプリの使い方
+      <br>アプリの使い方
+    </p>
+  </div>
+  <%# アプリの使い方 %>
+    
+  <%# ログインしている場合はFMTとメンバーの登録画面へ %>
+  <div class='using'>
+    <h2 class='heading'>追加する画面へ</h2>
+    <%# <% if user_signed_in? %> 
+    <%# ログインしている場合はFMTとメンバーの登録画面へ %>   
+    <%# //ログインしていない場合は登録への誘導 %>
+    <%# else %>
+    <p class="explanation">
+      <br>次のページへのリンク
+      <br>次のページへのリンク
+      <br>次のページへのリンク
+      <br>次のページへのリンク
+     <p>
+    <%# end %>
+    <%# //ログインしていない場合は登録への誘導 %>
+  </div>
+<%= render "shared/footer" %>
