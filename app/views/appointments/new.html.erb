@@ -2,7 +2,7 @@
 <div class="appt-input-contents">
   <div class="appt-input-main">
     <h2 class="appt-input-title">アポイント情報追加</h2>
-    <%= form_with model: @appointment, url: appointments_path, local: true do |f| %>
+    <%= form_with model: @appointment, url: appointments_path, method: :post, id:"form" do |f| %>
 
     <%# <%= render 'shared/error_messages', model: f.object %>
 
@@ -24,6 +24,21 @@
     <% end %>
   </div>
 </div>
+
+<div id="list">
+</div>
+
+<% @appointment.each do |appointment| %>
+ <div class="post" data-id=<%= appointment.id %>>
+    <div class="post-date">
+        約束日：<%= appointment.appt_date %>
+    </div>
+    <div class="post-content">
+        社名：<%= appointment.company %>
+    </div>
+</div>
+<% end %>
+
 
   <div class="input-btn-contents">
     <%=link_to 'もどる', root_path, class:"back-btn" %>

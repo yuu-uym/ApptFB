@@ -6,13 +6,13 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = Appointment.new
+    @appointment = Appointment.all.order(id: "DESC")
   end
 
   def create
-   @appointment = Appointment.new(appointment_params)
-    if @appointment.save
-       redirect_to root_path
+   appointment = Appointment.new(appointment_params)
+    if appointment.save
+      render json:{ post: appointment }
     else
        render :new
     end
