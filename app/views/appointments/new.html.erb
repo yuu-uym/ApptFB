@@ -37,7 +37,7 @@
         <td><%= appointment.result_id %></td>
         <td><%= appointment.score%>点</td>
         <td><%= link_to '編集',"#", class: "appt-red-btn" %></td>
-        <td><%= link_to '削除',"#", method: :delete, class:'appt-destroy' %></td>
+        <td><%= link_to '削除', appointment_path(appointment.id), method: :delete, class:'appt-destroy' %></td>
 </tr>
 <% end %>
 

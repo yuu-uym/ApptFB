@@ -19,6 +19,17 @@ class AppointmentsController < ApplicationController
   end
 
   def show
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    if @appointment.user_id == current_user.id
+       @appointment.destroy
+       redirect_to action: :new
+    else
+      redirect_to action: :index
+    end
   end
 
   private
