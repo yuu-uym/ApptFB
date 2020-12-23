@@ -6,7 +6,7 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = Appointment.all.order(id: "DESC")
+    @appointment = Appointment.all.order(appt_date: "DESC")
   end
 
   def create

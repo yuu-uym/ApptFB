@@ -77,3 +77,28 @@
 .appt_content{
   height: 4vh;
 }
+
+/* 一覧 */
+table th {
+  padding: 10px;
+  background-color:#5d8ef0;
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 2px rgb(101, 167, 252);
+  width: 80%
+
+}
+table th, table td {
+  border: solid 1px  rgb(101, 167, 252);
+}
+
+.table-lists{
+  margin: 15px 0;
+
+}

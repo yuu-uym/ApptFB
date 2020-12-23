@@ -25,20 +25,23 @@
   </div>
 </div>
 
-<div id="list">
-</div>
+<table class='table-lists'>
+    <tr class='item-list'>
+      <th><%="約束日" %></th><th><%="社名" %></th><th><%="結論" %></th><th><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+    </tr>
 
 <% @appointment.each do |appointment| %>
- <div class="post" data-id=<%= appointment.id %>>
-    <div class="post-date">
-        約束日：<%= appointment.appt_date %>
-    </div>
-    <div class="post-content">
-        社名：<%= appointment.company %>
-    </div>
-</div>
+ <tr class="list", id="list">
+        <td><%= appointment.appt_date %></td>
+        <td><%= appointment.company %></td>
+        <td><%= appointment.result_id %></td>
+        <td><%= appointment.score%>点</td>
+        <td><%= link_to '編集',"#", class: "appt-red-btn" %></td>
+        <td><%= link_to '削除',"#", method: :delete, class:'appt-destroy' %></td>
+</tr>
 <% end %>
 
+</table>
 
   <div class="input-btn-contents">
     <%=link_to 'もどる', root_path, class:"back-btn" %>

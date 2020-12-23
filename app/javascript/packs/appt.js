@@ -15,15 +15,18 @@ function appointment() {
     const list = document.getElementById("list");
     const formText = document.getElementById("content");
     const HTML = `
-       <div class="post" data-id=${item.id}>
-        <div class="post-date">
-         約束日：${item.appt_date}
-        </div>
-        <div class="post-content">
-        ${item.company}
-        </div>
-      </div>`;
-    list.insertAdjacentHTML("afterend", HTML);
+    <table class='table-lists'>
+    <tr class="post" >
+    <td>${item.appt_date }</td>
+    <td>${item.company}</td>
+    <td></td>
+    <td>点</td>
+    <td><a href="#">編集</a></td>
+    <td><a href="#">削除</a></td>
+    </tr>
+    </table>
+      `;
+    list.insertAdjacentHTML("beforebegin", HTML);
     formText.value = "";
     };
     e.preventDefault();
