@@ -17,7 +17,7 @@
         <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
        <div class="input-btn-contents">
-         <%= f.submit "登録する", class:"appt-input-btn", id: "submit" %>
+         <%= f.submit "登録", class:"appt-input-btn", id: "submit" %>
        </div>
     </div>
     <%# 情報入力フォーム %>
@@ -34,10 +34,10 @@
  <tr class="list", id="list">
         <td><%= appointment.appt_date %></td>
         <td><%= appointment.company %></td>
-        <td><%= appointment.result_id %></td>
-        <td><%= appointment.score%>点</td>
-        <td><%= link_to '編集',"#", class: "appt-red-btn" %></td>
-        <td><%= link_to '削除',"#", method: :delete, class:'appt-destroy' %></td>
+        <td><%= appointment.result.name if appointment.result %></td>
+        <td><%= appointment.score %>点</td>
+        <td><%= link_to '編集', edit_appointment_path(appointment.id), class: "appt-red-btn" %></td>
+        <td><%= link_to '削除', appointment_path(appointment.id), method: :delete, class:'appt-destroy' %></td>
 </tr>
 <% end %>
 

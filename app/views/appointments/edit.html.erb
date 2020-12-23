@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+
+<div class="input-contents">
+  <div class="input-main">
+    <h2 class="input-title">詳細入力画面</h2>
+     <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
+
+        <%# render 'shared/error_messages', model: f.object %>
+
+
+    <%# 社名と日 %>
+    <div class="new-appt">
+      <div class="weight-bold-text">
+        社名
+        <%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
+      </div>
+      <div class="weight-bold-text">
+        約束日
+        <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
+      </div>
+    </div>
+    <%# 社名と日 %>
+
+    <%# 追加情報 %>
+   <div class="set-amount">
+      <div class="weight-bold-text">
+        結論
+        <%= f.collection_select(:result_id, Result.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      <div class="weight-bold-text">
+        点数
+        <%= f.text_field :score, id:"content", class:"appt_content" %>
+      </div>
+    </div>
+     <%# 追加情報 %>
+    
+    <div class="input-btn-contents">
+      <%= f.submit "登録する", class:"input-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    
+    <% end %> 
+  </div>
+</div>
+
+<%= render "shared/footer" %>
