@@ -42,7 +42,7 @@ Things you may want to cover:
 | Column               | Type       | Options                        |
 | -------------------- | ---------- | -----------                    |
 | company              | string     | null: false                    |
-| datetime             | datetime   | null: false                    |
+| appt_date            | date   | null: false                    |
 | result_id            | integer    |                    |
 | score                | integer    |                   |
 | user                 | references | null: false,foreign_key: true  | 

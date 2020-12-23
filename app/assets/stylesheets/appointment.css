@@ -58,3 +58,47 @@
 }
 /* トップページ下段 */
 
+/* アポ情報入力 */
+
+.appt-input-contents{
+  display: flex;
+}
+.appt-input-main {
+  background-color: rgb(194, 238, 252);
+  
+  min-width: 450px;
+  margin: 10vh;
+}
+
+.new-appt{
+  display: flex;
+}
+
+.appt_content{
+  height: 4vh;
+}
+
+/* 一覧 */
+table th {
+  padding: 10px;
+  background-color:#5d8ef0;
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 2px rgb(101, 167, 252);
+  width: 80%
+
+}
+table th, table td {
+  border: solid 1px  rgb(101, 167, 252);
+}
+
+.table-lists{
+  margin: 15px 0;
+
+}
