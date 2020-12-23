@@ -22,6 +22,20 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.find(params[:id])
   end
 
+  def edit
+    @appointment = Appointment.find(params[:id])
+    redirect_to action: :new if @appointment.user_id != current_user.id 
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+    if @appointment.update(appointment_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @appointment = Appointment.find(params[:id])
     if @appointment.user_id == current_user.id
