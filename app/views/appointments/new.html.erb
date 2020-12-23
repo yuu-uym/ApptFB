@@ -1,32 +1,31 @@
 <%= render "shared/header" %>
-<div class="input-contents">
-  <div class="input-main">
-    <h2 class="input-title">アポイント情報を入力</h2>
+<div class="appt-input-contents">
+  <div class="appt-input-main">
+    <h2 class="appt-input-title">アポイント情報追加</h2>
     <%= form_with model: @appointment, url: appointments_path, local: true do |f| %>
 
     <%# <%= render 'shared/error_messages', model: f.object %>
 
-    <%# テーマ名 %>
+    <%# 情報入力フォーム %>
     <div class="new-appt">
       <div class="weight-bold-text">
         社名
-        <span class="indispensable">必須</span>
+        <%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
       </div>
-      <%= f.text_area :company, class:"items-text", id:"item-name", placeholder:"株式会社〇〇" %>
+      <div class="weight-bold-text">
+        約束日
+        <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
+      </div>
+       <div class="input-btn-contents">
+         <%= f.submit "登録する", class:"appt-input-btn", id: "submit" %>
+       </div>
     </div>
-    <div class="weight-bold-text">
-          約束日
-          <%= f.date_field :appt_date %>
-        </div>
-    <%# /テーマ名 %>
-
-    <div class="input-btn-contents">
-      <%= f.submit "登録する", class:"input-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
+    <%# 情報入力フォーム %>
+    <% end %>
   </div>
-
-  <% end %>
 </div>
 
+  <div class="input-btn-contents">
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
 <%= render "shared/footer" %>
