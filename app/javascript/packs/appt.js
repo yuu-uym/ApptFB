@@ -21,7 +21,7 @@ function appointment() {
     <td>${item.company}</td>
     <td></td>
     <td>点</td>
-    <td><a href="#">編集</a></td>
+    <td><a href="/appointments/${item.id}/edit">編集</a></td>
     <td><a data-method="delete" href="/appointments/${item.id}">削除</a></td> 
     </tr>
     </table>
