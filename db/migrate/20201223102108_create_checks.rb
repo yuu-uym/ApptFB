@@ -23,7 +23,6 @@ class CreateChecks < ActiveRecord::Migration[6.0]
       t.string :item19
       t.string :item20
       t.references :user,           null: false, foreign_key: true 
-      t.references :appointment,    null: false, foreign_key: true 
       t.timestamps
     end
   end
