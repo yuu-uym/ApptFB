@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_091357) do
+ActiveRecord::Schema.define(version: 2020_12_23_102108) do
 
   create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company", null: false
@@ -21,6 +21,36 @@ ActiveRecord::Schema.define(version: 2020_12_22_091357) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "item1", null: false
+    t.string "item2"
+    t.string "item3"
+    t.string "item4"
+    t.string "item5"
+    t.string "item6"
+    t.string "item7"
+    t.string "item8"
+    t.string "item9"
+    t.string "item10"
+    t.string "item11"
+    t.string "item12"
+    t.string "item13"
+    t.string "item14"
+    t.string "item15"
+    t.string "item16"
+    t.string "item17"
+    t.string "item18"
+    t.string "item19"
+    t.string "item20"
+    t.bigint "user_id", null: false
+    t.bigint "appointment_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["appointment_id"], name: "index_checks_on_appointment_id"
+    t.index ["user_id"], name: "index_checks_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -38,4 +68,6 @@ ActiveRecord::Schema.define(version: 2020_12_22_091357) do
   end
 
   add_foreign_key "appointments", "users"
+  add_foreign_key "checks", "appointments"
+  add_foreign_key "checks", "users"
 end
