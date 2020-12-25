@@ -29,34 +29,38 @@
       </div>
      </div>
     <%# 社名と日 %>
-
-<%= @appointment.check.title%>
-<%= @appointment.check.item1%>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "５点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "４点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "３点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "２点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "１点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "０点", {value: :male, style: "display: inline-block;"} %>
-<%= @appointment.check.item2%>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "５点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "４点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "３点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "２点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "１点", {value: :male, style: "display: inline-block;"} %>
-<%= f.radio_button :gender, :male %>
-<%= f.label :gender, "０点", {value: :male, style: "display: inline-block;"} %>
+<div class="pull-checks">
+  <%= @appointment.check.title%>
+  <div class="pull-check">
+  <%= @appointment.check.item1%>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "５点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "４点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "３点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "２点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "１点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item1, :male %>
+    <%= f.label :item1, "０点", {value: :male, style: "display: inline-block;"} %>
+  </div>
+ <div class="pull-check">
+  <%= @appointment.check.item2%>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "５点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "４点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "３点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "２点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "１点", {value: :male, style: "display: inline-block;"} %>
+    <%= f.radio_button :item2, :male %>
+    <%= f.label :item2, "０点", {value: :male, style: "display: inline-block;"} %>
+  </div>
 
 
         <%# 追加情報 %>
