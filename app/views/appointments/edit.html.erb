@@ -18,10 +18,48 @@
         約束日
         <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
-    </div>
+     <div class="weight-bold-text">
+        チェック項目
+         <select name="[check_id]" >
+       <option>チェックリストを選択してください</option>
+         <% Check.all.each do |check| %>
+            <option id="checklist" value=<%= check.id %>><%= check.title %></option>
+          <% end %>
+     </select>
+      </div>
+     </div>
     <%# 社名と日 %>
 
-    <%# 追加情報 %>
+<%= @appointment.check.title%>
+<%= @appointment.check.item1%>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "５点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "４点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "３点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "２点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "１点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "０点", {value: :male, style: "display: inline-block;"} %>
+<%= @appointment.check.item2%>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "５点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "４点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "３点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "２点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "１点", {value: :male, style: "display: inline-block;"} %>
+<%= f.radio_button :gender, :male %>
+<%= f.label :gender, "０点", {value: :male, style: "display: inline-block;"} %>
+
+
+        <%# 追加情報 %>
    <div class="set-amount">
       <div class="weight-bold-text">
         結論
@@ -33,13 +71,13 @@
       </div>
     </div>
      <%# 追加情報 %>
-    
     <div class="input-btn-contents">
-      <%= f.submit "登録する", class:"input-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%= f.submit "更新", class:"input-btn" %>
+      <%=link_to 'もどる', new_appointment_path, class:"back-btn" %>
     </div>
     
     <% end %> 
+
   </div>
 </div>
 
