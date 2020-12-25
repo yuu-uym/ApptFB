@@ -32,7 +32,6 @@ class AppointmentsController < ApplicationController
   end
 
   def update
-    binding.pry
     @appointment = Appointment.find(params[:id])
     if @appointment.update(appointment_params)
       redirect_to new_appointment_path
