@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_23_102108) do
+ActiveRecord::Schema.define(version: 2020_12_25_033510) do
+
+  create_table "appointment_checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "appointment_id"
+    t.bigint "check_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["appointment_id"], name: "index_appointment_checks_on_appointment_id"
+    t.index ["check_id"], name: "index_appointment_checks_on_check_id"
+  end
 
   create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company", null: false
@@ -20,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_12_23_102108) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "check_id"
+    t.index ["check_id"], name: "index_appointments_on_check_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -46,10 +57,8 @@ ActiveRecord::Schema.define(version: 2020_12_23_102108) do
     t.string "item19"
     t.string "item20"
     t.bigint "user_id", null: false
-    t.bigint "appointment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["appointment_id"], name: "index_checks_on_appointment_id"
     t.index ["user_id"], name: "index_checks_on_user_id"
   end
 
@@ -67,7 +76,9 @@ ActiveRecord::Schema.define(version: 2020_12_23_102108) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appointment_checks", "appointments"
+  add_foreign_key "appointment_checks", "checks"
+  add_foreign_key "appointments", "checks"
   add_foreign_key "appointments", "users"
-  add_foreign_key "checks", "appointments"
   add_foreign_key "checks", "users"
 end
