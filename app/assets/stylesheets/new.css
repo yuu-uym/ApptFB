@@ -12,8 +12,6 @@
 
 .input-main {
   background-color: #FFF;
-  width: 70vw;
-  min-width: 450px;
   padding: 10vh 15vw;
 }
 
@@ -41,7 +39,7 @@
 }
 
 .select-box {
-  height: 30px;
+  height: 10vh;
   width: 100%;
   background-color: #f5f5f5;
   padding-left: 20px;
@@ -80,40 +78,8 @@
 }
 /* アイテムの詳細など */
 
-/*月額上限 */
-.set-amount {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
-.price-content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price-text {
-  /* min-width: 170px; */
-  display: flex;
-  align-items: center;
-}
-
-.price-yen {
-  font-size: 3vmin;
-}
-
-.price-input {
-  height: 5vh;
-  text-align: right;
-  padding-right: 10px;
-}
-/*月額上限 */
-
-/* 下部ボタン */
+/* ボタン */
 .input-btn-contents {
   margin: 20px;
   text-align: center;
@@ -139,4 +105,5 @@
   text-decoration: none;
   font-size: 2.5vmin;
 }
-/* 下部ボタン */
+
+/* ボタン */
