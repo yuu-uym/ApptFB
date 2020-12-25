@@ -1,0 +1,115 @@
+<%= render "shared/header" %>
+
+<div class="input-contents">
+  <div class="input-main">
+    <h2 class="input-title">フォーマット登録ページ</h2>
+    <%= form_with model: @check, url: checks_path, local: true do |f| %>
+
+    <%# render 'shared/error_messages', model: f.object %> 
+
+    <%# タイトル %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+       タイトル
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 40文字まで)" %>
+    </div>
+    <%# /タイトル%>
+
+    <%# 詳細 %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          項目１
+         <%= f.text_area :item1, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目２
+         <%= f.text_area :item2, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目３
+         <%= f.text_area :item3, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目４
+         <%= f.text_area :item4, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目５
+         <%= f.text_area :item5, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目６
+         <%= f.text_area :item6, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目７
+         <%= f.text_area :item7, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目８
+         <%= f.text_area :item8, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目９
+         <%= f.text_area :item9, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１０
+         <%= f.text_area :item10, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１１
+         <%= f.text_area :item11, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１２
+         <%= f.text_area :item12, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１３
+         <%= f.text_area :item13, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１４
+         <%= f.text_area :item14, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１５
+         <%= f.text_area :item15, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１６
+         <%= f.text_area :item16, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１７
+         <%= f.text_area :item17, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１８
+         <%= f.text_area :item18, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目１９
+         <%= f.text_area :item19, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+        <div class="weight-bold-text">
+          項目２０
+         <%= f.text_area :item20, class:"items-text", id:"item-name", placeholder:"(例)" %>
+        </div>
+      </div>
+    </div>
+    <%# /詳細 %>
+
+    <div class="input-btn-contents">
+      <%= f.submit "登録する", class:"input-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

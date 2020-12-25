@@ -16,6 +16,15 @@
         約束日
         <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
+      <div class="weight-bold-text">
+        チェック項目
+         <select name="[check_id]" >
+       <option>チェックリストを選択してください</option>
+         <% Check.all.each do |check| %>
+            <option id="checklist" value=<%= check.id %>><%= check.title %></option>
+          <% end %>
+     </select>
+      </div>
        <div class="input-btn-contents">
          <%= f.submit "登録", class:"appt-input-btn", id: "submit" %>
        </div>
@@ -44,6 +53,6 @@
 </table>
 
   <div class="input-btn-contents">
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <%=link_to 'もどる', appointments_path, class:"back-btn" %>
   </div>
 <%= render "shared/footer" %>
