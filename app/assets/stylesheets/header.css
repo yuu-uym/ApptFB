@@ -3,14 +3,27 @@
   top: 0;
   left: 0;
   z-index: 100;
+  
   width: 100%;
 }
 
+.menu-user{
+  margin: 10px 20px;
+}
+
+.menu-user-btn{
+  align-items: center;
+  background: #e0e0e0;
+  border: 2px solid black;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 2vmin;
+}
 
 .page-top {
   font-size: 1vmin;
   padding: 10px;
-  text-align: center;
   background-color: #253141;
   height: 8vh;
 }
@@ -22,15 +35,16 @@
 
 .gnav-item {
   font-size: 3vmin;
-  padding: 0 24px;
   list-style: none;
+  text-align: center;
 }
 
 .gnav-link {
   position: relative;
-  padding: 5px 0;
   color: white;
   text-decoration: none;
+  font-size: 20px;
+  margin-left: 200px;
 }
 
 /* 下線の装飾 */

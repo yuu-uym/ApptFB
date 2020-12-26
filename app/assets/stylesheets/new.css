@@ -46,7 +46,7 @@
 }
 /* /共通 */
 
-/* ジャンル名、アイテム名 */
+/* 項目、フォーマット名 */
 .new-items {
   padding: 2vh 0;
 }
@@ -61,7 +61,7 @@
 }
 /* ジャンル名、アイテム名 */
 
-/* アイテムの詳細など */
+/* 項目の詳細など */
 .items-detail {
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,7 @@
 }
 
 .items-detail>.form {
-  width: 300px;
+  width: 50vw;
   padding: 2vh 0;
 }
 
