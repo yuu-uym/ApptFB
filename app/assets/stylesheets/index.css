@@ -3,7 +3,7 @@
 }
 
 .side-bar {
-  background-color: #253141;
+  background-color:#253141;
   height: calc(100vh- 8vh - 100px);
   width: 30vw;
 }

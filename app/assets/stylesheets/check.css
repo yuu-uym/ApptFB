@@ -14,3 +14,16 @@
 .check-list{
   background-color: #e0e0e0;
 }
+
+.addition{
+  background-color: #5D8EF0;
+  color: white;
+  margin: 10px;
+  padding: 1vmin 3vmin;
+}
+
+.score{
+  margin-left: 20px;
+  font-size: 20px;
+  border-bottom: double 6px red;
+}
