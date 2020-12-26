@@ -1,0 +1,44 @@
+.wrapper { 
+  display: flex;
+}
+
+.side-bar {
+  background-color: #253141;
+  height: calc(100vh- 8vh - 100px);
+  width: 30vw;
+}
+
+.menu{
+  flex-direction: column;
+  margin-top: 8vh;
+  display: flex;
+  padding: 50px;
+  color: #ffffff;
+}
+
+.about {
+  background-color: #ffffff;
+  width: 70vw;
+  height: calc(100vh- 8vh - 100px);
+  padding: 50px 0 0 0;
+ }
+ 
+ .menu-btn{
+  margin-top: 20px;
+  background: #aaa;
+  border: 2px solid black;
+  color: black;
+  padding: 15px 20%;
+  text-decoration: none;
+  font-size: 2vmin;
+}
+
+.appt-menu-btn{
+  margin-top: 20px;
+  background: #e0e0e0;
+  border: 2px solid black;
+  color: black;
+  padding: 15px 20%;
+  text-decoration: none;
+  font-size: 2vmin;
+}

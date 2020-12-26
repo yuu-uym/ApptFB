@@ -6,11 +6,12 @@
   width: 100%;
 }
 
+
 .page-top {
   font-size: 1vmin;
   padding: 10px;
   text-align: center;
-  background-color: #9eceff;
+  background-color: #253141;
   height: 8vh;
 }
 
@@ -28,7 +29,7 @@
 .gnav-link {
   position: relative;
   padding: 5px 0;
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 
@@ -47,7 +48,7 @@
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color:#333;
+  background-color:white;
 }
 
 .gnav-link:hover:after {
