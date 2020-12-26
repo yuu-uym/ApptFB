@@ -109,7 +109,7 @@ table {
 
 }
 table th, table td {
-  border: solid 1px  rgb(101, 167, 252);
+  border: solid 1px  black;
   text-align: center;
   white-space: nowrap;
 }
