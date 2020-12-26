@@ -1,17 +1,20 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
 
-<div id="js-page-top" class="page-top">
-  <div class="menu-user">
+<header class='top-page-header'>
+<div class="wrapper">
+  <div id="js-page-top" class="page-top-left">
+   <ul class="gnav-list">
     <% if user_signed_in? %>
-      <%= link_to "#{current_user.name}さん", root_path, class: "menu-user-btn"%>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "menu-user-btn" %>
+     <li class="gnav-item"><%= link_to "#{current_user.name}さん", root_path, class: "top-btn"%></li>
+      <li class="gnav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top-btn" %></li>
     <% else %> 
-      <%= link_to 'ログイン', new_user_session_path, class: "menu-user-btn" %>
-      <%= link_to '新規登録', new_user_registration_path, class: "menu-user-btn" %>
+      <li class="gnav-item"><%= link_to 'ログイン', new_user_session_path, class: "top-btn" %></li>
+      <li class="gnav-item"><%= link_to '新規登録', new_user_registration_path, class: "top-btn" %></li>
     <% end %> 
-     <%= link_to 'アプリの名前', root_path, class: "gnav-link" %>
+    </ul>
+
+  </div>
+  <div id="js-page-top" class="page-top-right">
+  <li class="gnav-item"><%= link_to 'アプリの名前', root_path, class: "app-title" %></li>
   </div>
 </div>
-
 </header>
