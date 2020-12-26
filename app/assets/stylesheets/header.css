@@ -10,26 +10,26 @@
 .page-top-left {
   font-size: 1vmin;
   padding: 10px;
-  background-color: #253141;
+  background-color: #040A1B;
   width: 30vw;
 }
 
 .top-btn{
   margin: 10px;
-  background: #aaa;
-  background-color: white;
+  background-color: #c3daea;
   color: black;
   text-align: center;
   text-decoration: none;
   padding: 1vmin;
   font-size: 2vmin;
+  white-space: nowrap;
 }
 
 .page-top-right {
   font-size: 1vmin;
   padding: 10px;
   width: 70vw;
-  background-color: #253141;
+  background-color: #040A1B;
 }
 
 .app-title{

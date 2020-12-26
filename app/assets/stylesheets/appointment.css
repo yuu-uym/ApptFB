@@ -64,7 +64,7 @@
   display: flex;
 }
 .appt-input-main {
-  background-color: rgb(194, 238, 252);
+  background-color: #c3daea;
   min-width: 450px;
   margin: 10vh auto;
 }
@@ -82,7 +82,8 @@
 }
 
 .appt-input-btn{
-  background-color: #5d8ef0;
+  background-color: #335495;
+  color: white;
   padding: 10px;
 }
 
@@ -92,11 +93,11 @@ table th {
 }
 
 .company-lists{
-  background-color: #73bce9;
+  background-color: #84a7dd;
 }
 
 .company-list{
-  background-color: #addfff;
+  background-color: #c3daea;
 }
 
 table td {

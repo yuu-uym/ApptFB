@@ -3,7 +3,7 @@
 }
 
 .side-bar {
-  background-color:#253141;
+  background-color:#040A1B;
   height: calc(100vh- 8vh - 100px);
   width: 30vw;
 }
@@ -25,24 +25,26 @@
  
  .menu-btn{
   margin: 10px;
-  background: #aaa;
+  background: #c3daea;
   border: 2px solid black;
   color: black;
   text-align: center;
   padding: 20px;
   text-decoration: none;
   font-size: 2vmin;
+  white-space: nowrap
 }
 
 .appt-menu-btn{
   margin: 10px;
   margin-top: 20px;
-  background: #e0e0e0;
+  background: #c3daea;
   border: 2px solid black;
   color: black;
   text-align: center;
   padding: 20px;
   text-decoration: none;
   font-size: 2vmin;
+  white-space: nowrap
 }
 
