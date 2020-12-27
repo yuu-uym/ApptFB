@@ -134,6 +134,7 @@ table th, table td {
   width: 80vw; 
   margin: auto; 
   
+  margin-bottom: 60px;
 }
 
 .table-check{
@@ -142,4 +143,8 @@ table th, table td {
   margin-bottom: 40px;
 }
 
-
+.appt-new{
+  height: calc(100vh- 8vh - 100px);
+  overflow: scroll; 
+  height: 100vh;
+}

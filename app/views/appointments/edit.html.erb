@@ -20,23 +20,14 @@
         <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
      </div>
-     
-      
-    
+
         <%# 追加情報 %>
    
       <div class="weight-bold-text">
         結論
         <%= f.collection_select(:result_id, Result.all, :id, :name, {}, {class:"appt_content", id:"item-category"}) %>
-     
-      
         チェック項目
-         <select class="appt_content" name="[check_id]" >
-          <option>チェックリストを選択してください</option>
-            <% Check.all.each do |check| %>
-            <option id="checklist" value=<%= check.id %>><%= check.title %></option>
-            <% end %>
-          </select>
+       <%= f.collection_select :check_id, Check.all, :id, :title %>
       </div>
    
      <%# 追加情報 %>
