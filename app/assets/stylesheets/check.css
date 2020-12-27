@@ -41,5 +41,8 @@
   margin-bottom: 40px;
 }
 
-.fmt{
+.my-list{
+  text-align: center;
+  font-size: 3vmin;
+  margin: 30px 0 10px;
 }
