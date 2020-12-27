@@ -6,6 +6,8 @@ class ChecksController < ApplicationController
 
   def index
     @checks = Check.all
+    checks = @checks
+    @mychecks = current_user.checks
   end
 
   def create
