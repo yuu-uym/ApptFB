@@ -1,51 +1,65 @@
-
-
-
 /* トップページ上部 */
 .title-contents{
   width: calc(100vw - 30vw);
-  height: 25vh;
   background-size: cover;
-  margin-left: 30px;
+  background-image: url('top.jpg');
+  height: 20vh;
 }
 
 .service-title{
-  font-size: 5vmin;
-  
+  font-size: 4vmin; 
 }
 
 .service-explanation{
-  font-size: 3vmin ;
- 
+  font-size: 3vmin ; 
 }
 /* トップページ上部 */
 
 /* トップページ中段 */
-.how-to{
+.service-aim{
   width: calc(100vw - 30vw);
-  height: 25vh;
   background-size: cover;
   margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.how-to{
+  width: calc(100vw - 30vw);
+  background-size: cover;
+  background-color: rgb(213, 223, 252);
 }
 
 .how-to-title{
-  font-size: 5vmin;
-
+  font-size: 4vmin;
+  margin-left: 30px;
 }
+
+.how-to-items{
+  display: flex;
+  background-color: rgb(213, 223, 252);
+  margin-bottom: 10px;
+  width:  100%;
+}
+
+.how-ro-item{
+  font-size: 2vmin;
+  width: 30%;
+  margin: 10px;
+}
+
+.item-img {
+  margin-right: 10px;
+  width: 30vh;
+  height: 30vh;
+}
+
 
 .how-to-explanation{
   font-size: 3vmin ;
-  
 }
 /* トップページ中段 */
 
 /* トップページ下段 */
-.using{
-  width: calc(100vw - 30vw);
-  height: 25vh;
-  background-size: cover;
-  margin-left: 30px;
-}
 
 .heading{
   font-size: 5vmin;
@@ -65,12 +79,13 @@
 }
 .appt-input-main {
   background-color: #c3daea;
-  min-width: 450px;
   margin: 10vh auto;
+  
 }
 
 .appt-input-title{
   margin: 10px;
+  font-size: 3vmin;
 }
 
 .new-appt{
