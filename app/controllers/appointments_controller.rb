@@ -10,6 +10,8 @@ class AppointmentsController < ApplicationController
   def new
     @checks = Check.all
     @appointment = Appointment.all.order(appt_date: "DESC")
+    appointment = @appointment
+    @appointment = current_user.appointments
   end
 
   def create

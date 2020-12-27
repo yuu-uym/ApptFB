@@ -10,4 +10,5 @@ class Appointment < ApplicationRecord
     validates :appt_date
     validates :check_id, numericality: true
   end
+  
 end

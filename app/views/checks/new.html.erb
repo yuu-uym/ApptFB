@@ -13,7 +13,7 @@
        タイトル
       </div>
       <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 40文字まで)" %>
-    </div>
+      </div>
     <%# /タイトル%>
 
     <%# 詳細 %>
@@ -21,7 +21,7 @@
       <div class="form">
         <div class="weight-bold-text">
           項目１
-         <%= f.text_area :item1, class:"items-text", id:"item-name", placeholder:"(例)" %>
+         <%= f.text_area :item1, class:"items-text", id:"item-name", placeholder:"(例)"%>
         </div>
         <div class="weight-bold-text">
           項目２
@@ -101,10 +101,11 @@
         </div>
       </div>
     </div>
+   
     <%# /詳細 %>
 
     <div class="input-btn-contents">
-      <%= f.submit "登録する", class:"input-btn" %>
+      <%= f.submit "登録する", class:"appt-input-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
 

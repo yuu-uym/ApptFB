@@ -1,60 +1,74 @@
-.main{
-  height: calc(100vh- 8vh - 100px);
-  padding: 50px 0 0 0;
-}
-
-
 /* トップページ上部 */
 .title-contents{
-  width: 100vw;
-  height: 25vh;
+  width: calc(100vw - 30vw);
   background-size: cover;
+  background-image: url('top.jpg');
+  height: 20vh;
 }
 
 .service-title{
-  font-size: 5vmin;
-  text-align: center;
+  font-size: 4vmin; 
 }
 
 .service-explanation{
-  font-size: 3vmin ;
-  text-align: center;
+  font-size: 3vmin ; 
 }
 /* トップページ上部 */
 
 /* トップページ中段 */
-.how-to{
-  width: 100vw;
-  height: 25vh;
+.service-aim{
+  width: calc(100vw - 30vw);
   background-size: cover;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.how-to{
+  width: calc(100vw - 30vw);
+  background-size: cover;
+  background-color: rgb(213, 223, 252);
 }
 
 .how-to-title{
-  font-size: 5vmin;
-  text-align: center;
+  font-size: 4vmin;
+  margin-left: 30px;
 }
+
+.how-to-items{
+  display: flex;
+  background-color: rgb(213, 223, 252);
+  margin-bottom: 10px;
+  width:  100%;
+}
+
+.how-ro-item{
+  font-size: 2vmin;
+  width: 30%;
+  margin: 10px;
+}
+
+.item-img {
+  margin-right: 10px;
+  width: 30vh;
+  height: 30vh;
+}
+
 
 .how-to-explanation{
   font-size: 3vmin ;
-  text-align: center;
 }
 /* トップページ中段 */
 
 /* トップページ下段 */
-.using{
-  width: 100vw;
-  height: 25vh;
-  background-size: cover;
-}
 
 .heading{
   font-size: 5vmin;
-  text-align: center;
+  
 }
 
 .explanation{
   font-size: 3vmin ;
-  text-align: center;
+ 
 }
 /* トップページ下段 */
 
@@ -64,10 +78,14 @@
   display: flex;
 }
 .appt-input-main {
-  background-color: rgb(194, 238, 252);
+  background-color: #c3daea;
+  margin: 10vh auto;
   
-  min-width: 450px;
-  margin: 10vh;
+}
+
+.appt-input-title{
+  margin: 10px;
+  font-size: 3vmin;
 }
 
 .new-appt{
@@ -75,13 +93,26 @@
 }
 
 .appt_content{
-  height: 4vh;
+  height: 30px;
+}
+
+.appt-input-btn{
+  background-color: #335495;
+  color: white;
+  padding: 10px;
 }
 
 /* 一覧 */
 table th {
-  padding: 10px;
-  background-color:#5d8ef0;
+  padding: 5px;
+}
+
+.company-lists{
+  background-color: #84a7dd;
+}
+
+.company-list{
+  background-color: #c3daea;
 }
 
 table td {
@@ -89,16 +120,26 @@ table td {
 }
 
 table {
-  border-collapse: collapse;
   border: solid 2px rgb(101, 167, 252);
   width: 80%
 
 }
 table th, table td {
-  border: solid 1px  rgb(101, 167, 252);
+  border: solid 1px  black;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .table-lists{
-  margin: 15px 0;
-
+  width: 80vw; 
+  margin: auto; 
+  margin-bottom: 20px;
 }
+
+.table-check{
+  width: 50vw; 
+  margin: auto; 
+  margin-bottom: 20px;
+}
+
+

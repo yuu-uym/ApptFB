@@ -12,8 +12,6 @@
 
 .input-main {
   background-color: #FFF;
-  width: 70vw;
-  min-width: 450px;
   padding: 10vh 15vw;
 }
 
@@ -38,17 +36,18 @@
 
 .weight-bold-text {
   margin: 2vh;
+  font-size: 3vmin;
 }
 
 .select-box {
-  height: 30px;
+  height: 10vh;
   width: 100%;
   background-color: #f5f5f5;
   padding-left: 20px;
 }
 /* /共通 */
 
-/* ジャンル名、アイテム名 */
+/* 項目、フォーマット名 */
 .new-items {
   padding: 2vh 0;
 }
@@ -63,7 +62,7 @@
 }
 /* ジャンル名、アイテム名 */
 
-/* アイテムの詳細など */
+/* 項目の詳細など */
 .items-detail {
   display: flex;
   justify-content: space-between;
@@ -71,7 +70,7 @@
 }
 
 .items-detail>.form {
-  width: 300px;
+  width: 50vw;
   padding: 2vh 0;
 }
 
@@ -80,40 +79,8 @@
 }
 /* アイテムの詳細など */
 
-/*月額上限 */
-.set-amount {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
-.price-content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price-text {
-  /* min-width: 170px; */
-  display: flex;
-  align-items: center;
-}
-
-.price-yen {
-  font-size: 3vmin;
-}
-
-.price-input {
-  height: 5vh;
-  text-align: right;
-  padding-right: 10px;
-}
-/*月額上限 */
-
-/* 下部ボタン */
+/* ボタン */
 .input-btn-contents {
   margin: 20px;
   text-align: center;
@@ -122,9 +89,9 @@
 }
 
 .input-btn {
-  background: #ff8484;
-  border: 1px solid #ff8484;
-  color: #fff;
+  background: #335495;
+  border: 2px solid black;
+  color: black;
   width: 100%;
   height: 50px;
   font-size: 2.5vmin;
@@ -132,11 +99,13 @@
 }
 
 .back-btn {
-  background: #aaa;
-  border: 1px solid #aaa;
-  color: #fff;
+  margin-top: 20px;
+  background: #A5BECF;
+  border: 2px solid black;
+  color: black;
   padding: 15px 20%;
   text-decoration: none;
   font-size: 2.5vmin;
 }
-/* 下部ボタン */
+
+/* ボタン */

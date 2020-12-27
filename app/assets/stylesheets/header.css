@@ -3,15 +3,39 @@
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100%;
 }
 
-.page-top {
+.page-top-left {
   font-size: 1vmin;
   padding: 10px;
+  background-color: #040A1B;
+  width: 30vw;
+  height: 40px;
+}
+
+.top-btn{
+  margin: 10px;
+  background-color: #c3daea;
+  color: black;
   text-align: center;
-  background-color: #9eceff;
-  height: 8vh;
+  text-decoration: none;
+  padding: 1vmin;
+  font-size: 2vmin;
+  white-space: nowrap;
+}
+
+.page-top-right {
+  font-size: 1vmin;
+  padding: 10px;
+  width: 70vw;
+  height: 40px;
+  background-color: #040A1B;
+}
+
+.app-title{
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
 }
 
 .gnav-list {
@@ -21,7 +45,6 @@
 
 .gnav-item {
   font-size: 3vmin;
-  padding: 0 24px;
   list-style: none;
 }
 
@@ -32,28 +55,7 @@
   text-decoration: none;
 }
 
-/* 下線の装飾 */
-.gnav-link:hover {
-  opacity: 1;
-}
 
-.gnav-link:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color:#333;
-}
-
-.gnav-link:hover:after {
-  width: 100%;
-}
-/* 下線の装飾 */
 
 
 

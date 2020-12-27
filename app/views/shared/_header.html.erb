@@ -1,14 +1,20 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
+
 <header class='top-page-header'>
-  <div id="js-page-top" class="page-top">
-    <ul class="gnav-list">
+<div class="wrapper">
+  <div id="js-page-top" class="page-top-left">
+   <ul class="gnav-list">
     <% if user_signed_in? %>
-      <li class="gnav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "gnav-link" %></li>
-      <li class="gnav-item"><%= current_user.name %>さん</li>
+     <li class="gnav-item"><%= link_to "#{current_user.name}さん", root_path, class: "top-btn"%></li>
+      <li class="gnav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top-btn" %></li>
     <% else %> 
-      <li class="gnav-item"><%= link_to 'ログイン', new_user_session_path, class: "gnav-link" %></li>
-      <li class="gnav-item"><%= link_to '新規登録', new_user_registration_path, class: "gnav-link" %></li>
+      <li class="gnav-item"><%= link_to 'ログイン', new_user_session_path, class: "top-btn" %></li>
+      <li class="gnav-item"><%= link_to '新規登録', new_user_registration_path, class: "top-btn" %></li>
     <% end %> 
     </ul>
+
   </div>
+  <div id="js-page-top" class="page-top-right">
+  <li class="gnav-item"><%= link_to '営業アポ振り返りツール', root_path, class: "app-title" %></li>
+  </div>
+</div>
 </header>

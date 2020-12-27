@@ -10,20 +10,20 @@
     <div class="new-appt">
       <div class="weight-bold-text">
         社名
-        <%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
+        <br><%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
       </div>
       <div class="weight-bold-text">
         約束日
-        <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
+        <br><%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
       <div class="weight-bold-text">
         チェック項目
-         <select name="[check_id]" >
+         <br><select class="appt_content" name="[check_id]" >
        <option>チェックリストを選択してください</option>
          <% Check.all.each do |check| %>
             <option id="checklist" value=<%= check.id %>><%= check.title %></option>
           <% end %>
-     </select>
+        </select>
       </div>
        <div class="input-btn-contents">
          <%= f.submit "登録", class:"appt-input-btn", id: "submit" %>
@@ -34,25 +34,26 @@
   </div>
 </div>
 
-<table class='table-lists'>
-    <tr class='item-list'>
-      <th><%="約束日" %></th><th><%="社名" %></th><th><%="結論" %></th><th><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
-    </tr>
-
-<% @appointment.each do |appointment| %>
- <tr class="list", id="list">
-        <td><%= appointment.appt_date %></td>
-        <td><%= appointment.company %></td>
-        <td><%= appointment.result.name if appointment.result %></td>
-        <td><%= appointment.score %>点</td>
-        <td><%= link_to '編集', edit_appointment_path(appointment.id), class: "appt-red-btn" %></td>
-        <td><%= link_to '削除', appointment_path(appointment.id), method: :delete, class:'appt-destroy' %></td>
-</tr>
+<%# アポ一覧 %>
+<table class='table-lists' >
+<tr class="company-lists"><th colspan="6">個社リスト</th></tr>
+  <tr class='company-list'>
+    <th><%="約束日" %></th><th><%="社名" %></th><th><%="結論" %></th><th><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+  </tr>
+  <% @appointment.each do |appointment| %>
+  <tr class="list", id="list">
+      <td><%= appointment.appt_date %></td>
+      <td><%= appointment.company %></td>
+      <td><%= appointment.result.name if appointment.result %></td>
+      <td><%= appointment.score %>点</td>
+      <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment.id), class: "appt-red-btn" %></td>
+      <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment.id), method: :delete, class: "delete-btn"%>
+      </td>
+  </tr>
 <% end %>
-
 </table>
+<%# アポ一覧 %>
 
-  <div class="input-btn-contents">
-    <%=link_to 'もどる', appointments_path, class:"back-btn" %>
-  </div>
+
+
 <%= render "shared/footer" %>
