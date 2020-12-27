@@ -27,3 +27,19 @@
   font-size: 20px;
   border-bottom: double 6px red;
 }
+
+.check-index{
+  margin-top: 40px;
+}
+
+.check-show{
+  margin-top: 50px;
+}
+.check-show-title{
+  text-align: center;
+  font-size: 4vmin;
+  margin-bottom: 40px;
+}
+
+.fmt{
+}

@@ -22,3 +22,8 @@
 * {
  box-sizing: border-box;
 }
+
+.relative{
+  min-height: 100vh;
+  position: relative;
+}

@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class="check-show">
+  <h2 class="check-show-title">登録済みフォーマット一覧</h2>
+
+  
+<table class='table-lists' >
+<tr class="company-lists"><th colspan="4">フォーマットリスト</th></tr>
+  <tr class='company-list'>
+    <th><%="タイトル" %></th><th><%="登録者" %></th><th><%="編集" %></th><th><%="削除" %></th>
+  </tr>
+ <% @checks.each do |check| %>
+  <tr class="list", id="list">
+      <td><%= check.title %></td>
+      <td><%= check.user.name %>さん</td>
+      <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_check_path(check.id), class: "appt-red-btn" %></td>
+      <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), check_path(check.id), method: :delete, class: "delete-btn"%>
+      </td>
+  </tr>
+<% end %>
+</table>
+
+</div>
+
+  <%= render "shared/footer" %>

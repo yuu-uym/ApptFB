@@ -1,9 +1,10 @@
-<%= render "shared/header" %>
+<div class="relative">
+  <%= render "shared/header" %>
 
-<div class="input-contents">
-  <div class="input-main">
-    <h2 class="input-title">詳細入力画面</h2>
-     <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
+  <div class="input-contents">  
+    <div class="input-main">
+      <h2 class="input-title">詳細入力画面</h2>
+      <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
 
         <%# render 'shared/error_messages', model: f.object %>
 
@@ -18,7 +19,7 @@
         約束日
         <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
       </div>
-      </div>
+     </div>
      
       
     
@@ -31,18 +32,18 @@
       
         チェック項目
          <select class="appt_content" name="[check_id]" >
-       <option>チェックリストを選択してください</option>
-         <% Check.all.each do |check| %>
+          <option>チェックリストを選択してください</option>
+            <% Check.all.each do |check| %>
             <option id="checklist" value=<%= check.id %>><%= check.title %></option>
-          <% end %>
-     </select>
+            <% end %>
+          </select>
       </div>
    
      <%# 追加情報 %>
 
        <%# 社名と日 %>
 <table class='table-check'>
- <tr class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
+ <tr   class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
   <tr class='check-list'><th><%="チェック項目" %></th><th><%="点数" %></th></tr>
   <tr><td><%= @appointment.check.item1%></td><td><%= f.text_field :ten, id:"item1",class:"ten" %>点</td></tr>
   <tr><td><%= @appointment.check.item2%></td><td><%= f.text_field :ten, id:"item2",class:"ten"%>点</td></tr>
@@ -69,19 +70,20 @@
 
 <button  type="button", id= "addition", class="addition">合計</button><span id='score', class="score"></span>点
 
-<div class="weight-bold-text">
+      <div class="weight-bold-text">
         点数
         <%= f.text_field :score, id:"", class:"appt_content" %>点
       </div>
-    <div class="input-btn-contents">
-      <%= f.submit "更新", class:"appt-input-btn" %>
-      <%=link_to 'もどる', new_appointment_path, class:"back-btn" %>
-    </div>
-  
+       <div class="input-btn-contents">
+        <%= f.submit "更新", class:"appt-input-btn" %>
+        <%=link_to 'もどる', new_appointment_path, class:"back-btn" %>
+      </div>
+
     <% end %> 
 </div>
 
   </div>
-</div>
+
 
 <%= render "shared/footer" %>
+</div>
