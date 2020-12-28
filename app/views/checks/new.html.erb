@@ -6,12 +6,13 @@
     <h2 class="input-title">フォーマット登録ページ</h2>
     <%= form_with model: @check, url: checks_path, local: true do |f| %>
 
-    <%# render 'shared/error_messages', model: f.object %> 
+    <%= render 'shared/error_messages', model: f.object %> 
 
     <%# タイトル %>
     <div class="new-items">
       <div class="weight-bold-text">
        タイトル
+       <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 40文字まで)" %>
       </div>
@@ -22,6 +23,7 @@
       <div class="form">
         <div class="weight-bold-text">
           項目１
+          <span class="indispensable">必須</span>
          <%= f.text_area :item1, class:"items-text", id:"item-name", placeholder:"(例)"%>
         </div>
         <div class="weight-bold-text">

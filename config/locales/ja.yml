@@ -1,0 +1,9 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+       joined: 入社年/月
+     check:
+       title: タイトル
+       item1: 項目１
