@@ -3,8 +3,8 @@
 
 <div class="input-contents">
   <div class="input-main">
-    <h2 class="input-title">フォーマット登録ページ</h2>
-    <%= form_with model: @check, url: checks_path, local: true do |f| %>
+    <h2 class="input-title">フォーマット編集ページ</h2>
+    <%= form_with model: @check, url: check_path, local: true do |f| %>
 
     <%# render 'shared/error_messages', model: f.object %> 
 
@@ -107,7 +107,7 @@
 
     <div class="input-btn-contents">
       <%= f.submit "登録する", class:"appt-input-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', checks_path, class:"back-btn" %>
     </div>
 
     <% end %>

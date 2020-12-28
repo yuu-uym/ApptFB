@@ -54,7 +54,7 @@ class AppointmentsController < ApplicationController
 
   private
   def appointment_params
-    params.require(:appointment).permit(:company, :appt_date, :result_id, :score).merge(user_id: current_user.id, check_id: params[:check_id])
+    params.require(:appointment).permit(:company, :appt_date, :result_id, :score, :check_id).merge(user_id: current_user.id)
   end
 
   def get_cheak

@@ -1,0 +1,40 @@
+<%= render "shared/header" %>
+
+<div class="check-show">
+  <h2 class="check-show-title">登録済みフォーマット一覧</h2>
+
+<table class='table-lists' >
+<tr class="company-lists"><th colspan="3">フォーマットリスト</th></tr>
+  <tr class='company-list'>
+    <th><%="タイトル" %></th><th><%="詳細" %></th><th><%="登録者" %></th>
+  </tr>
+ <% @checks.each do |check| %>
+  <tr class="list", id="list">
+      <td><%= check.title %></td>
+      <td><%= link_to image_tag('link.jpg', :size => '20x20' ), check_path(check.id), class: "appt-red-btn" %></td>
+      <td><%= check.user.name %>さん</td>
+      </td>
+  </tr>
+<% end %>
+</table>
+
+<% unless  @mychecks.length == 0 %>
+<table class='table-lists' >
+<h2 class="my-list">自分が登録したフォーマット</h2>
+<tr class="company-lists"><th colspan="2">フォーマットリスト</th></tr>
+  <tr class='company-list'>
+    <th><%="タイトル" %></th><th><%="編集" %></th>
+  </tr>
+ <% @mychecks.each do |check| %>
+  <tr class="list", id="list">
+      <td><%= check.title %></td>
+      <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_check_path(check.id), class: "appt-red-btn" %></td>
+      </td>
+  </tr>
+<% end %>
+</table>
+<%end%>
+
+</div>
+
+  <%= render "shared/footer" %>

@@ -37,7 +37,7 @@
 .how-to-items{
   display: flex;
   background-color: rgb(213, 223, 252);
-  margin-bottom: 10px;
+  margin-bottom: 60px;
   width:  100%;
 }
 
@@ -133,13 +133,18 @@ table th, table td {
 .table-lists{
   width: 80vw; 
   margin: auto; 
-  margin-bottom: 20px;
+  
+  margin-bottom: 60px;
 }
 
 .table-check{
   width: 50vw; 
   margin: auto; 
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-
+.appt-new{
+  height: calc(100vh- 8vh - 100px);
+  overflow: scroll; 
+  height: 100vh;
+}

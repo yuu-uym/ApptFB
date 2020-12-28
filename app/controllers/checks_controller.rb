@@ -4,8 +4,13 @@ class ChecksController < ApplicationController
     @check = Check.new
   end
 
+  def index
+    @checks = Check.all
+    checks = @checks
+    @mychecks = current_user.checks
+  end
+
   def create
-    binding.pry
     @check = Check.new(check_params)
     if @check.save
       redirect_to root_path
@@ -15,8 +20,20 @@ class ChecksController < ApplicationController
   end
 
   def edit
-    @appointment = Appointment.find(params[:id])
-    redirect_to action: :new if @appointment.user_id != current_user.id 
+    @check = Check.find(params[:id])
+    redirect_to action: :index if @check.user_id != current_user.id 
+  end
+
+  def update
+    @check = Check.find(params[:id])
+    if @check.update(check_params)
+      redirect_to checks_path
+    else
+      render :index
+    end
+  end
+
+  def show
     @check = Check.find(params[:id])
   end
 
