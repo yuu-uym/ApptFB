@@ -38,6 +38,12 @@
   margin-left: 20px;
 }
 
+.subtitle{
+  font-size: 2vmin;
+  color: white;
+  margin-left: 10px;
+}
+
 .gnav-list {
   display: flex;
   justify-content: center;

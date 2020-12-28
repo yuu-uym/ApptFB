@@ -1,6 +1,4 @@
-.table-check{
-}
-
+/*スコアチェック */
 .point{
   border: none;
   width: 50px;
@@ -9,12 +7,11 @@
 
 .check-list-title{
   background-color: #c0c0c0;
-  
 }
+
 .check-list{
   background-color: #e0e0e0;
 }
-
 
 .addition{
   background-color: #335495;
@@ -29,10 +26,7 @@
   border-bottom: double 6px red;
 }
 
-.check-index{
-  margin-top: 40px;
-}
-
+/* 一覧 */
 .check-show{
   margin-top: 50px;
 }

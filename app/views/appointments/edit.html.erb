@@ -5,76 +5,65 @@
     <div class="input-main">
       <h2 class="input-title">詳細入力画面</h2>
       <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
 
-        <%# render 'shared/error_messages', model: f.object %>
-
-
-    <%# 社名と日 %>
-    <div class="new-appt">
-      <div class="weight-bold-text">
-        社名
-        <%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
+      <%# アポ情報登録 %>
+      <div class="new-appt">
+        <div class="weight-bold-text">
+          社名
+          <%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
+        </div>
+        <div class="weight-bold-text">
+          約束日
+          <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
+        </div>
       </div>
-      <div class="weight-bold-text">
-        約束日
-        <%= f.date_field :appt_date, id:"content", class:"appt_content" %>
-      </div>
-     </div>
-
-        <%# 追加情報 %>
-   
       <div class="weight-bold-text">
         結論
         <%= f.collection_select(:result_id, Result.all, :id, :name, {}, {class:"appt_content", id:"item-category"}) %>
         チェック項目
-       <%= f.collection_select :check_id, Check.all, :id, :title %>
+        <%= f.collection_select :check_id, Check.all, :id, :title %>
       </div>
-   
-     <%# 追加情報 %>
 
-       <%# 社名と日 %>
-<table class='table-check'>
- <tr   class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
-  <tr class='check-list'><th><%="チェック項目" %></th><th><%="点数" %></th></tr>
-  <tr><td><%= @appointment.check.item1%></td><td><%= f.number_field :point1, id:"item1",class:"point", min: 0, max: 5 %>点</td></tr>
-  <tr><td><%= @appointment.check.item2%></td><td><%= f.number_field :point2, id:"item2",class:"point", min: 0, max: 5 %>点</td></tr>
-  <tr><td><%= @appointment.check.item3%></td><td><%= f.number_field :point3, id:"item3",class:"point", min: 0, max: 5 %>点</td></tr>
-  <tr><td><%= @appointment.check.item4%></td><td><%= f.number_field :point4, id:"item4",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item5%></td><td><%= f.number_field :point5, id:"item5",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item6%></td><td><%= f.number_field :point6, id:"item6",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item7%></td><td><%= f.number_field :point7, id:"item7",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item8%></td><td><%= f.number_field :point8, id:"item8",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item9%></td><td><%= f.number_field :point9, id:"item9",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item10%></td><td><%= f.number_field :point10, id:"item10",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item11%></td><td><%= f.number_field :point11, id:"item11",class:"point", min: 0, max: 5 %>点</td></tr>
-  <tr><td><%= @appointment.check.item12%></td><td><%= f.number_field :point12, id:"item12",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item13%></td><td><%= f.number_field :point13, id:"item13",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item14%></td><td><%= f.number_field :point14, id:"item14",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item15%></td><td><%= f.number_field :point15, id:"item15",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item16%></td><td><%= f.number_field :point16, id:"item16",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item17%></td><td><%= f.number_field :point17, id:"item17",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item18%></td><td><%= f.number_field :point18, id:"item18",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item19%></td><td><%= f.number_field :point19, id:"item19",class:"point", min: 0, max: 5  %>点</td></tr>
-  <tr><td><%= @appointment.check.item20%></td><td><%= f.number_field :point20, id:"item20",class:"point", min: 0, max: 5  %>点</td></tr>
-</table>
-
-
-<button  type="button", id= "addition", class="addition">合計</button><span id='score', class="score"></span>点
+      <%# チェックリスト %>
+      <table class='table-check'>
+        <tr class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
+        <tr class='check-list'><th><%="チェック項目" %></th><th><%="点数" %></th></tr>
+        <tr><td><%= @appointment.check.item1%></td><td><%= f.number_field :point1, id:"item1",class:"point", min: 0, max: 5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item2%></td><td><%= f.number_field :point2, id:"item2",class:"point", min: 0, max: 5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item3%></td><td><%= f.number_field :point3, id:"item3",class:"point", min: 0, max: 5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item4%></td><td><%= f.number_field :point4, id:"item4",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item5%></td><td><%= f.number_field :point5, id:"item5",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item6%></td><td><%= f.number_field :point6, id:"item6",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item7%></td><td><%= f.number_field :point7, id:"item7",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item8%></td><td><%= f.number_field :point8, id:"item8",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item9%></td><td><%= f.number_field :point9, id:"item9",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item10%></td><td><%= f.number_field :point10, id:"item10",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item11%></td><td><%= f.number_field :point11, id:"item11",class:"point", min: 0, max: 5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item12%></td><td><%= f.number_field :point12, id:"item12",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item13%></td><td><%= f.number_field :point13, id:"item13",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item14%></td><td><%= f.number_field :point14, id:"item14",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item15%></td><td><%= f.number_field :point15, id:"item15",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item16%></td><td><%= f.number_field :point16, id:"item16",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item17%></td><td><%= f.number_field :point17, id:"item17",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item18%></td><td><%= f.number_field :point18, id:"item18",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item19%></td><td><%= f.number_field :point19, id:"item19",class:"point", min: 0, max: 5  %>点</td></tr>
+        <tr><td><%= @appointment.check.item20%></td><td><%= f.number_field :point20, id:"item20",class:"point", min: 0, max: 5  %>点</td></tr>
+      </table>
+      <button  type="button", id= "addition", class="addition">合計</button><span id='score', class="score"></span>点
 
       <div class="weight-bold-text">
         点数
         <%= f.text_field :score, id:"", class:"appt_content" %>点
       </div>
-       <div class="input-btn-contents">
+      <div class="input-btn-contents">
         <%= f.submit "更新", class:"appt-input-btn" %>
         <%=link_to 'もどる', new_appointment_path, class:"back-btn" %>
       </div>
 
-    <% end %> 
-</div>
-
+      <% end %> 
+    </div>
   </div>
 
-
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
 </div>

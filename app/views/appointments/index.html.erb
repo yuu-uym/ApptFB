@@ -1,20 +1,17 @@
 <div class="relative">
   <%= render "shared/header" %>
-
   <div class="wrapper">
 
-  <div class="side-bar"> 
-    <div class="menu">
-      <%= link_to 'アポイント情報追加', new_appointment_path, class: "appt-menu-btn" %>
-      <%= link_to 'フォーマットの追加', new_check_path, class: "menu-btn"%>
-      <%= link_to 'フォーマット一覧', checks_path, class: "menu-btn"%>
+    <div class="side-bar"> 
+      <div class="menu">
+        <%= link_to 'アポイント情報追加', new_appointment_path, class: "appt-menu-btn" %>
+        <%= link_to 'フォーマットの追加', new_check_path, class: "menu-btn"%>
+        <%= link_to 'フォーマット一覧', checks_path, class: "menu-btn"%>
+      </div>
     </div>
-  </div>
-
 
   <%= render "shared/about" %> 
-
   </div>
 
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
 </div>

@@ -7,3 +7,7 @@ ja:
      check:
        title: タイトル
        item1: 項目１
+     appointment:
+       score: 点数
+       company: 社名
+       appt_date: 約束日
