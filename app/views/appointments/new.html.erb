@@ -8,17 +8,18 @@
       <h2 class="appt-input-title">アポイント情報追加</h2>  
           <%# 情報入力フォーム %>
       <%= form_with model: @appointment, url: appointments_path, method: :post, id:"form" do |f| %>
+      
       <div class="new-appt">
         <div class="weight-bold-text">
-          社名
+          社名<span class="indispensable">必須</span>
           <br><%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
         </div>
          <div class="weight-bold-text">
-          約束日
+          約束日<span class="indispensable">必須</span>
           <br><%= f.date_field :appt_date, id:"content", class:"appt_content" %>
         </div>
         <div class="weight-bold-text">
-          チェック項目
+          チェック項目<span class="indispensable">必須</span>
           <br><%= f.collection_select :check_id, Check.all, :id, :title , prompt: "選択してください", class:"appt_content"%>
         </div>
 

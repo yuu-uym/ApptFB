@@ -29,7 +29,7 @@ class ChecksController < ApplicationController
     if @check.update(check_params)
       redirect_to checks_path
     else
-      render :index
+      render :edit
     end
   end
 
