@@ -4,6 +4,6 @@ ja:
      user:
        name: 名前
        joined: 入社年/月
-     tweet:
-       text: テキスト
-       image: 画像
+     check:
+       title: タイトル
+       item1: 項目１
