@@ -7,7 +7,7 @@
     <table class='table-lists' >
       <tr class="company-lists"><th colspan="3">フォーマットリスト</th></tr>
       <tr class='company-list'>
-        <th><%="タイトル" %></th><th><%="詳細" %></th><th><%="登録者" %></th>
+        <th class="th-title"><%="タイトル" %></th><th class="th-show"><%="詳細" %></th><th class="th-name"><%="登録者" %></th>
       </tr>
       <% @checks.each do |check| %>
       <tr class="list", id="list">
@@ -23,7 +23,7 @@
       <h2 class="my-list">自分が登録したフォーマット</h2>
       <tr class="company-lists"><th colspan="2">フォーマットリスト</th></tr>
       <tr class='company-list'>
-        <th><%="タイトル" %></th><th><%="編集" %></th>
+        <th class="th-title"><%="タイトル" %></th><th><%="編集" %></th>
       </tr>
       <% @mychecks.each do |check| %>
       <tr class="list", id="list">

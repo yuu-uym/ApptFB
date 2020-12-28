@@ -57,8 +57,32 @@ table th, table td {
 .table-lists{
   width: 80vw; 
   margin: auto; 
-  
+  margin-bottom: 20px;
+}
+.table-lists-last{
+  width: 80vw; 
+  margin: auto; 
   margin-bottom: 60px;
+}
+
+.td-date{
+  width: 20%;
+}
+
+.td-company{
+  width: 40%;
+}
+
+.td-result{
+  width: 15%;
+}
+
+.td-score{
+  width: 15%;
+}
+
+.th-title{
+  width: 70%;
 }
 
 .table-check{

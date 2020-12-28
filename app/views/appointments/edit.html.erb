@@ -28,7 +28,7 @@
       <%# チェックリスト %>
       <table class='table-check'>
         <tr class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
-        <tr class='check-list'><th><%="チェック項目" %></th><th><%="点数" %></th></tr>
+        <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="点数" %></th></tr>
         <tr><td><%= @appointment.check.item1%></td><td><%= f.number_field :point1, id:"item1",class:"point", min: 0, max: 5 %>点</td></tr>
         <tr><td><%= @appointment.check.item2%></td><td><%= f.number_field :point2, id:"item2",class:"point", min: 0, max: 5 %>点</td></tr>
         <tr><td><%= @appointment.check.item3%></td><td><%= f.number_field :point3, id:"item3",class:"point", min: 0, max: 5 %>点</td></tr>

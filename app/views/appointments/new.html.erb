@@ -30,26 +30,85 @@
       </div>
     </div>
 
-    <%# アポ一覧 %>
+    <%# アポ 結論未入力と未選択のもの %>
     <table class='table-lists' >
-      <tr class="company-lists"><th colspan="6">個社リスト</th></tr>
+      <tr class="company-lists"><th colspan="6">結果未入力の個社一覧</th></tr>
       <tr class='company-list'>
-        <th><%="約束日" %></th><th><%="社名" %></th><th><%="結論" %></th><th><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
       </tr>
-      <% @appointment.each do |appointment| %>
+      <%@appointment1.each do |appointment1|  %>
       <tr class="list", id="list">
-        <td><%= appointment.appt_date %></td>
-        <td><%= appointment.company %></td>
-        <td><%= appointment.result.name if appointment.result %></td>
-        <td><%= appointment.score %>点</td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment.id), method: :delete, class: "delete-btn"%>
+        <td><%= appointment1.appt_date %></td>
+        <td><%= appointment1.company %></td>
+        <td><%= appointment1.result.name if appointment1.result %></td>
+        <td><%= appointment1.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment1.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment1.id), method: :delete, class: "delete-btn"%></td>
+      </tr>
+      <% end %>
+    </table>
+    <%# アポ 結論未入力のもの %>
+
+    <%# アポ 受注のもの %>
+    <table class='table-lists' >
+      <tr class="company-lists"><th colspan="6">受注済み個社一覧</th></tr>
+      <tr class='company-list'>
+        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+      </tr>
+      <%@appointment2.each do |appointment2|  %>
+      <tr class="list", id="list">
+        <td><%= appointment2.appt_date %></td>
+        <td><%= appointment2.company %></td>
+        <td><%= appointment2.result.name if appointment2.result %></td>
+        <td><%= appointment2.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment2.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment2.id), method: :delete, class: "delete-btn"%>
         </td>
       </tr>
       <% end %>
     </table>
-    <%# アポ一覧 %>
+    <%# アポ 結論未入力のもの %>
+
+    <%# アポ 失注のもの %>
+    <table class='table-lists' >
+      <tr class="company-lists"><th colspan="6">失注個社一覧</th></tr>
+      <tr class='company-list'>
+        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+       </tr>
+      <%@appointment3.each do |appointment3|  %>
+      <tr class="list", id="list">
+        <td><%= appointment3.appt_date %></td>
+        <td><%= appointment3.company %></td>
+        <td><%= appointment3.result.name if appointment3.result %></td>
+        <td><%= appointment3.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment3.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment3.id), method: :delete, class: "delete-btn"%>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+    <%# アポ 失注のもの %>
+
+    <%# アポ 検討中のもの %>
+    <table class='table-lists-last' >
+      <tr class="company-lists"><th colspan="6">検討中個社一覧</th></tr>
+      <tr class='company-list'>
+      <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+       </tr>
+      <%@appointment4.each do |appointment4|  %>
+      <tr class="list", id="list">
+        <td><%= appointment4.appt_date %></td>
+        <td><%= appointment4.company %></td>
+        <td><%= appointment4.result.name if appointment4.result %></td>
+        <td><%= appointment4.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment4.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment4.id), method: :delete, class: "delete-btn"%>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+    <%# アポ 検討中のもの %>
+
   </div>
-  
   <%= render "shared/footer" %>
 </div>
