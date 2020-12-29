@@ -1,6 +1,5 @@
 /* トップページ上部 */
 .title-contents{
-  width: calc(100vw - 30vw);
   background-size: cover;
   background-image: url('top.jpg');
   height: 20vh;
@@ -21,7 +20,7 @@
   font-size: 3vmin;
 }
 .service-aim{
-  width: calc(100vw - 30vw);
+  
   background-size: cover;
   margin-left: 30px;
   margin-bottom: 15px;
@@ -41,7 +40,7 @@
 
 .how-to-items{
   background-color: rgb(213, 223, 252);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   width:  100%;
 }
 

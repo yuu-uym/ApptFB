@@ -18,9 +18,8 @@
 
 .about {
   background-color: #ffffff;
-  width: 70vw;
   height: calc(100vh- 8vh - 100px);
-  padding: 40px 0 0 0;
+  padding: 8vmin 0 0 0;
   overflow: scroll; 
   height: 100vh;
  }
