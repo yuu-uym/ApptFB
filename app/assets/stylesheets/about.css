@@ -1,0 +1,66 @@
+/* トップページ上部 */
+.title-contents{
+  width: calc(100vw - 30vw);
+  background-size: cover;
+  background-image: url('top.jpg');
+  height: 20vh;
+}
+/* トップページ上部 */
+
+/* トップページ中段 */
+.service-title{
+  font-size: 4vmin; 
+}
+
+.service-explanation{
+  font-size: 3vmin ; 
+}
+
+.service-aim{
+  width: calc(100vw - 30vw);
+  background-size: cover;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+/* トップページ中段 */
+
+.how-to{
+  width: calc(100vw - 30vw);
+  background-size: cover;
+  background-color: rgb(213, 223, 252);
+}
+
+.how-to-title{
+  font-size: 4vmin;
+  margin-left: 30px;
+}
+
+.how-to-items{
+  display: flex;
+  background-color: rgb(213, 223, 252);
+  margin-bottom: 60px;
+  width:  100%;
+}
+
+.how-to-item{
+  font-size: 2vmin;
+  width: 30%;
+  margin: 10px;
+}
+
+.item-img {
+  margin-right: 10px;
+  width: 30vh;
+  height: 30vh;
+}
+
+.how-to-explanation{
+  font-size: 3vmin ;
+}
+/* トップページ下段 */
+
+.explanation{
+  font-size: 3vmin ;
+ 
+}
+/* トップページ下段 */

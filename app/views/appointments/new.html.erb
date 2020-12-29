@@ -3,54 +3,91 @@
 
   <div class="appt-new">
 
-  <div class="appt-input-contents">
-    <div class="appt-input-main">
+    <div class="appt-input-contents">
+      <div class="appt-input-main">
       <h2 class="appt-input-title">アポイント情報追加</h2>  
-          <%# 情報入力フォーム %>
       <%= form_with model: @appointment, url: appointments_path, method: :post, id:"form" do |f| %>
       
-      <div class="new-appt">
-        <div class="weight-bold-text">
-          社名<span class="indispensable">必須</span>
-          <br><%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
-        </div>
-         <div class="weight-bold-text">
-          約束日<span class="indispensable">必須</span>
-          <br><%= f.date_field :appt_date, id:"content", class:"appt_content" %>
-        </div>
-        <div class="weight-bold-text">
-          チェック項目<span class="indispensable">必須</span>
-          <br><%= f.collection_select :check_id, Check.all, :id, :title , prompt: "選択してください", class:"appt_content"%>
-        </div>
+        <div class="new-appt">
+          <div class="weight-bold-text">
+            社名<span class="indispensable">必須</span>
+            <br><%= f.text_area :company, class:"appt_content", id:"content", placeholder:"株式会社〇〇" %>
+          </div>
+          <div class="weight-bold-text">
+            約束日<span class="indispensable">必須</span>
+            <br><%= f.date_field :appt_date, id:"content", class:"appt_content" %>
+          </div>
+          <div class="weight-bold-text">
+            チェック項目<span class="indispensable">必須</span>
+            <br><%= f.collection_select :check_id, Check.all, :id, :title , prompt: "選択してください", class:"appt_content"%>
+          </div>
 
-        <div class="input-btn-contents">
-           <%= f.submit "登録", class:"appt-input-btn", id: "submit" %>
+          <div class="input-btn-contents">
+            <%= f.submit "登録", class:"appt-input-btn", id: "submit" %>
+          </div>
         </div>
-      </div>
       <% end %> 
-      <%# 情報入力フォーム %>
+      </div>
     </div>
-  </div>
 
-  <%# アポ一覧 %>
-  <table class='table-lists' >
-    <tr class="company-lists"><th colspan="6">個社リスト</th></tr>
-    <tr class='company-list'>
-      <th><%="約束日" %></th><th><%="社名" %></th><th><%="結論" %></th><th><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
-    </tr>
-    <% @appointment.each do |appointment| %>
-    <tr class="list", id="list">
-      <td><%= appointment.appt_date %></td>
-      <td><%= appointment.company %></td>
-      <td><%= appointment.result.name if appointment.result %></td>
-      <td><%= appointment.score %>点</td>
-      <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment.id), class: "appt-red-btn" %></td>
-      <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment.id), method: :delete, class: "delete-btn"%>
-      </td>
-    </tr>
-    <% end %>
-  </table>
-  <%# アポ一覧 %>
+    <%# アポ 一覧 %>
+    <table class='table-lists' >
+      <tr class="company-lists"><th colspan="6">登録済み顧客一覧</th></tr>
+      <tr class='company-list'>
+        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
+      </tr>
+      <%# 結果未入力アポ %>
+      <tr class="company-lists-sub"><th colspan="6">結果未入力</th></tr>
+      <%@appointment1.each do |appointment1|  %>
+      <tr class="list", id="list">
+        <td><%= appointment1.appt_date %></td>
+        <td><%= appointment1.company %></td>
+        <td><%= appointment1.result.name if appointment1.result %></td>
+        <td><%= appointment1.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment1.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment1.id), method: :delete, class: "delete-btn"%></td>
+      </tr>
+      <% end %>
+      <%# 受注済みアポ %>
+      <tr class="company-lists-sub"><th colspan="6">受注済み</th></tr>
+      <%@appointment2.each do |appointment2|  %>
+      <tr class="list", id="list">
+        <td><%= appointment2.appt_date %></td>
+        <td><%= appointment2.company %></td>
+        <td><%= appointment2.result.name if appointment2.result %></td>
+        <td><%= appointment2.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment2.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment2.id), method: :delete, class: "delete-btn"%></td>
+      </tr>
+      <% end %>
+      <%# 失注アポ %>
+      <tr class="company-lists-sub"><th colspan="6">失注</th></tr>
+      <%@appointment3.each do |appointment3|  %>
+      <tr class="list", id="list">
+        <td><%= appointment3.appt_date %></td>
+        <td><%= appointment3.company %></td>
+        <td><%= appointment3.result.name if appointment3.result %></td>
+        <td><%= appointment3.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment3.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment3.id), method: :delete, class: "delete-btn"%>
+        </td>
+      </tr>
+      <% end %>
+      <%# 検討中アポ %>
+      <tr class="company-lists-sub"><th colspan="6">検討中</th></tr>
+      <%@appointment4.each do |appointment4|  %>
+      <tr class="list", id="list">
+        <td><%= appointment4.appt_date %></td>
+        <td><%= appointment4.company %></td>
+        <td><%= appointment4.result.name if appointment4.result %></td>
+        <td><%= appointment4.score %>点</td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment4.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment4.id), method: :delete, class: "delete-btn"%>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+
   </div>
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
 </div>
