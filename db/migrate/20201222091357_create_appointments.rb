@@ -25,7 +25,7 @@ class CreateAppointments < ActiveRecord::Migration[6.0]
       t.integer :point18
       t.integer :point19
       t.integer :point20
-      t.references :user,           null: false, foreign_key: true 
+      t.bigint :user_id
       t.references :check,           null: false, foreign_key: true 
       t.timestamps
     end
