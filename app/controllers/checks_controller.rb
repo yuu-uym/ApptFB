@@ -2,6 +2,7 @@ class ChecksController < ApplicationController
   
   def new
     @check = Check.new
+    redirect_to action: :index if !current_user.admin?
   end
 
   def index
