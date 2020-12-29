@@ -10,26 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_29_053744) do
-
-  create_table "appointment_checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "appointment_id"
-    t.bigint "check_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["appointment_id"], name: "index_appointment_checks_on_appointment_id"
-    t.index ["check_id"], name: "index_appointment_checks_on_check_id"
-  end
+ActiveRecord::Schema.define(version: 2020_12_24_091357) do
 
   create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company", null: false
     t.date "appt_date", null: false
     t.integer "result_id"
     t.integer "score"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "check_id"
     t.integer "point1"
     t.integer "point2"
     t.integer "point3"
@@ -50,8 +37,10 @@ ActiveRecord::Schema.define(version: 2020_12_29_053744) do
     t.integer "point18"
     t.integer "point19"
     t.integer "point20"
-    t.index ["check_id"], name: "index_appointments_on_check_id"
-    t.index ["user_id"], name: "index_appointments_on_user_id"
+    t.bigint "user_id"
+    t.bigint "check_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -85,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_12_29_053744) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "joined", null: false
+    t.boolean "admin", default: false, null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -92,14 +82,9 @@ ActiveRecord::Schema.define(version: 2020_12_29_053744) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "appointment_checks", "appointments"
-  add_foreign_key "appointment_checks", "checks"
-  add_foreign_key "appointments", "checks"
-  add_foreign_key "appointments", "users"
   add_foreign_key "checks", "users"
 end

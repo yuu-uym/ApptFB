@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(username:  "管理者",
-  joined: "2020"
+User.create!(name:  "管理者",
+  joined: "2020",
   email: "admin@example.jp",
   password:  "admin1234",
   password_confirmation: "admin1234",
   admin: true)
 
 Check.create!(title:  "基礎項目",
-  user_id: "4",
+  user_id: "1",
   item1: "自己紹介・ラポールができた",
   item2: "アポの目的を伝えることができた",
   item3: "ソーシャルタイプに合わせた対応ができた",
