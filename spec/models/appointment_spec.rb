@@ -15,12 +15,12 @@ describe Appointment do
       it 'companyが空だと登録できない' do
         @appointment.company = ''
         @appointment.valid?
-        expect(@appointment.errors.full_messages).to include("Companyを入力してください")
+        expect(@appointment.errors.full_messages).to include("社名を入力してください")
       end
       it 'appt_dateが空だと登録できない' do
         @appointment.appt_date = ''
         @appointment.valid?
-        expect(@appointment.errors.full_messages).to include("Appt dateを入力してください")
+        expect(@appointment.errors.full_messages).to include("約束日を入力してください")
       end
       it 'check_idが空だと登録できない' do
         @appointment.check_id = ''
