@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.all.order(appt_date: "DESC")
     appointment = @appointment
     @appointment = current_user.appointments
-    @appointment1 = Appointment.where(result_id: nil,result_id: 1, user_id: current_user.id ).order(appt_date: "DESC")
+    @appointment1 = Appointment.where(result_id: [nil, 1], user_id: current_user.id ).order(appt_date: "DESC")
     @appointment2 = Appointment.where(result_id: 2, user_id: current_user.id ).order(appt_date: "DESC")
     @appointment3 = Appointment.where(result_id: 3, user_id: current_user.id ).order(appt_date: "DESC")
     @appointment4 = Appointment.where(result_id: 4, user_id: current_user.id ).order(appt_date: "DESC")
