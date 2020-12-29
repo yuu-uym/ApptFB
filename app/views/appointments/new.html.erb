@@ -32,10 +32,11 @@
 
     <%# アポ 結論未入力と未選択のもの %>
     <table class='table-lists' >
-      <tr class="company-lists"><th colspan="6">結果未入力の個社一覧</th></tr>
+      <tr class="company-lists"><th colspan="6">登録済み顧客一覧</th></tr>
       <tr class='company-list'>
         <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
       </tr>
+      <tr class="company-lists-sub"><th colspan="6">結果未入力</th></tr>
       <%@appointment1.each do |appointment1|  %>
       <tr class="list", id="list">
         <td><%= appointment1.appt_date %></td>
@@ -44,18 +45,8 @@
         <td><%= appointment1.score %>点</td>
         <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment1.id), class: "appt-red-btn" %></td>
         <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment1.id), method: :delete, class: "delete-btn"%></td>
-      </tr>
-      <% end %>
-    </table>
-    <%# アポ 結論未入力のもの %>
-
-    <%# アポ 受注のもの %>
-    <table class='table-lists' >
-      <tr class="company-lists"><th colspan="6">受注済み個社一覧</th></tr>
-      <tr class='company-list'>
-        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
-      </tr>
-      <%@appointment2.each do |appointment2|  %>
+              <tr class="company-lists-sub"><th colspan="6">受注済み</th></tr>
+        <%@appointment2.each do |appointment2|  %>
       <tr class="list", id="list">
         <td><%= appointment2.appt_date %></td>
         <td><%= appointment2.company %></td>
@@ -66,16 +57,8 @@
         </td>
       </tr>
       <% end %>
-    </table>
-    <%# アポ 結論未入力のもの %>
-
-    <%# アポ 失注のもの %>
-    <table class='table-lists' >
-      <tr class="company-lists"><th colspan="6">失注個社一覧</th></tr>
-      <tr class='company-list'>
-        <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
-       </tr>
-      <%@appointment3.each do |appointment3|  %>
+      <tr class="company-lists-sub"><th colspan="6">失注</th></tr>
+    <%@appointment3.each do |appointment3|  %>
       <tr class="list", id="list">
         <td><%= appointment3.appt_date %></td>
         <td><%= appointment3.company %></td>
@@ -86,16 +69,8 @@
         </td>
       </tr>
       <% end %>
-    </table>
-    <%# アポ 失注のもの %>
-
-    <%# アポ 検討中のもの %>
-    <table class='table-lists-last' >
-      <tr class="company-lists"><th colspan="6">検討中個社一覧</th></tr>
-      <tr class='company-list'>
-      <th class="td-date"><%="約束日" %></th><th class="td-company"><%="社名" %></th><th class="td-result"><%="結論" %></th><th class="td-score"><%="点数" %></th><th><%="編集" %></th><th><%="削除" %></th>
-       </tr>
-      <%@appointment4.each do |appointment4|  %>
+      <tr class="company-lists-sub"><th colspan="6">検討中</th></tr>
+<%@appointment4.each do |appointment4|  %>
       <tr class="list", id="list">
         <td><%= appointment4.appt_date %></td>
         <td><%= appointment4.company %></td>
@@ -106,8 +81,10 @@
         </td>
       </tr>
       <% end %>
+      </tr>
+      <% end %>
     </table>
-    <%# アポ 検討中のもの %>
+    <%# アポ 結論未入力のもの %>
 
   </div>
   <%= render "shared/footer" %>

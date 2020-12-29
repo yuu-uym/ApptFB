@@ -36,7 +36,7 @@ table th {
 }
 
 .company-list{
-  background-color: #c3daea;
+  background-color: #b6d5eb;
 }
 
 table td {
@@ -44,7 +44,7 @@ table td {
 }
 
 table {
-  border: solid 2px rgb(101, 167, 252);
+  border: solid 2px #65a7fc;
   width: 80%
 
 }
@@ -95,4 +95,8 @@ table th, table td {
   height: calc(100vh- 8vh - 100px);
   overflow: scroll; 
   height: 100vh;
+}
+
+.company-lists-sub{
+  background-color: #d9e3eb;
 }
