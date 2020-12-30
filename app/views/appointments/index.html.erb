@@ -4,10 +4,10 @@
 
     <div class="side-bar"> 
       <div class="menu">
-        <%= link_to 'アポイント情報追加', new_appointment_path, class: "appt-menu-btn" %>
-        <%= link_to 'フォーマット一覧', checks_path, class: "menu-btn"%>
+        <%= link_to 'アポイント情報', new_appointment_path, class: "appt-menu-btn" %>
+        <%= link_to 'チェックリスト一覧', checks_path, class: "menu-btn"%>
    <% if current_user && current_user.admin? %>
-        <%= link_to 'フォーマットの追加', new_check_path, class: "menu-btn"%>
+        <%= link_to 'チェックリストの追加', new_check_path, class: "menu-btn"%>
         <%end%>
       </div>
     </div>
