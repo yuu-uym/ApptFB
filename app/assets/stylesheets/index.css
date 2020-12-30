@@ -4,8 +4,8 @@
 
 .side-bar {
   background-color:#040A1B;
-  height: calc(100vh- 8vh - 100px);
   width: 30vw;
+  height: 100vh;
 }
 
 .menu{
@@ -22,6 +22,18 @@
   padding: 8vmin 0 0 0;
   overflow: scroll; 
   height: 100vh;
+ }
+
+ .about-footer{
+  background-color: #040A1B;
+  width: 100%;
+  height: 40px;
+ }
+
+ .about-copyright{
+  padding: 10px;
+  font-size: 1vmin;
+  color: white;
  }
  
  .menu-btn{

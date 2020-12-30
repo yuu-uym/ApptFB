@@ -1,19 +1,16 @@
-<div class="relative">
   <%= render "shared/header" %>
-  <div class="wrapper">
 
+  <div class="wrapper">
     <div class="side-bar"> 
       <div class="menu">
         <%= link_to 'アポイント情報', new_appointment_path, class: "appt-menu-btn" %>
         <%= link_to 'チェックリスト一覧', checks_path, class: "menu-btn"%>
-   <% if current_user && current_user.admin? %>
+        <% if current_user && current_user.admin? %>
         <%= link_to 'チェックリストの追加', new_check_path, class: "menu-btn"%>
         <%end%>
       </div>
     </div>
 
   <%= render "shared/about" %> 
+  
   </div>
-
-  <%= render "shared/footer" %>
-</div>
