@@ -10,6 +10,7 @@ require("channels")
 require("./appt")
 require("./check")
 require("./btn")
+require("./login")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

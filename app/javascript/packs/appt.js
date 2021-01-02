@@ -33,3 +33,17 @@ function appointment() {
   });
 }  
 window.addEventListener("load", appointment);
+
+window.addEventListener('load', function(){
+
+  const button1 = document.getElementById("submit")
+
+  button1.addEventListener('mouseover', function(){
+    button1.setAttribute("style", "background-color:#84a7dd")
+  })
+
+  button1.addEventListener('mouseout', function(){
+    button1.removeAttribute("style", "background-color:#FFBEDA;")
+  })
+
+})
