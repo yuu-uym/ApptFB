@@ -3,11 +3,11 @@
   <div id="js-page-top" class="page-top-left">
    <ul class="gnav-list">
       <% if user_signed_in? %>
-        <li class="gnav-item"><%= link_to "#{current_user.name}さん", root_path, class: "top-btn"%></li>
-        <li class="gnav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top-btn" %></li>
+        <li class="gnav-item"><%= link_to "#{current_user.name}さん", root_path, class: "top-btn", id: "btn4"%></li>
+        <li class="gnav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top-btn" , id: "btn5"%></li>
       <% else %> 
-        <li class="gnav-item"><%= link_to 'ログイン', new_user_session_path, class: "top-btn" %></li>
-        <li class="gnav-item"><%= link_to '新規登録', new_user_registration_path, class: "top-btn" %></li>
+        <li class="gnav-item"><%= link_to 'ログイン', new_user_session_path, class: "top-btn", id: "btn4" %></li>
+        <li class="gnav-item"><%= link_to '新規登録', new_user_registration_path, class: "top-btn", id: "btn5" %></li>
       <% end %> 
     </ul>
   </div>
