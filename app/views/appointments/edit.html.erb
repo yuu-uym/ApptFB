@@ -22,7 +22,8 @@
         結論
         <%= f.collection_select(:result_id, Result.all, :id, :name, {}, {class:"appt_content", id:"item-category"}) %>
         チェック項目
-        <%= f.collection_select :check_id, Check.all, :id, :title %>
+        <%= f.collection_select :check_id, Check.all, :id, :title %><span class="indispensable">５段階評価</span>
+       <br> <span class="annotation">※点数は0~5点（半角）で入力してください</span>
       </div>
 
       <%# チェックリスト %>

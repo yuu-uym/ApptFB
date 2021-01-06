@@ -26,6 +26,12 @@
   border-bottom: double 6px red;
 }
 
+.annotation{
+  color: red;
+  font-size: 2vmin;
+  margin-left: 100px;
+}
+
 /* 一覧 */
 .check-show{
   margin-top: 9vmin;
