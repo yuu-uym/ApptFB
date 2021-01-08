@@ -36,7 +36,6 @@ class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
-    redirect_to action: :new if @appointment.user_id != current_user.id 
   end
 
   def update
