@@ -55,12 +55,12 @@ table th, table td {
 }
 
 .table-lists{
-  width: 80vw; 
+  width: 80%; 
   margin: auto; 
   margin-bottom: 20px;
 }
 .table-lists-last{
-  width: 80vw; 
+  width: 80%; 
   margin: auto; 
   margin-bottom: 60px;
 }
