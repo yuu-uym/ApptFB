@@ -55,12 +55,12 @@ table th, table td {
 }
 
 .table-lists{
-  width: 80vw; 
+  width: 80%; 
   margin: auto; 
   margin-bottom: 20px;
 }
 .table-lists-last{
-  width: 80vw; 
+  width: 80%; 
   margin: auto; 
   margin-bottom: 60px;
 }
@@ -99,4 +99,14 @@ table th, table td {
 
 .company-lists-sub{
   background-color: #d9e3eb;
+}
+
+.member{
+  padding: 10vmin 2vmin;
+}
+
+.member-title{
+  text-align: center;
+  font-size: 3vmin;
+  margin-bottom: 20px;
 }

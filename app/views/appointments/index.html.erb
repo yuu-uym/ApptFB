@@ -6,7 +6,7 @@
         <%= link_to 'アポイント情報', new_appointment_path, class: "appt-menu-btn", id: "btn1" %>
         <%= link_to 'チェックリスト一覧', checks_path, class: "appt-menu-btn", id: "btn2" %>
         <% if current_user && current_user.admin? %>
-        <%= link_to 'チェックリストの追加', new_check_path, class: "appt-menu-btn", id: "btn3" %>
+        <%= link_to '管理者ページ',  admins_path, class: "appt-menu-btn", id: "btn3" %>
         <%end%>
       </div>
     </div>

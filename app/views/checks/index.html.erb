@@ -18,21 +18,7 @@
       <% end %>
     </table>
 
-    <% unless  @mychecks.length == 0 %>
-    <table class='table-lists' >
-      <h2 class="my-list">自分が登録したチェックリスト</h2>
-      <tr class="company-lists"><th colspan="2">チェックリスト</th></tr>
-      <tr class='company-list'>
-        <th class="th-title"><%="タイトル" %></th><th><%="編集" %></th>
-      </tr>
-      <% @mychecks.each do |check| %>
-      <tr class="list", id="list">
-        <td><%= check.title %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_check_path(check.id), class: "appt-red-btn" %></td>
-      </tr>
-      <% end %>
-    </table>
-    <%end%>
+
 
   </div>
 

@@ -1,0 +1,47 @@
+<div class="relative">
+  <%= render "shared/header" %>
+<div class="admin-contents">
+<%# ユーザー情報 %>
+  <div class="admin-user">
+    <h2 class="admin-show-title">メンバー情報</h2>
+    <% unless  @mychecks.length == 0 %>
+    <table class='table-lists' >
+      <h2 class="my-list">登録済みメンバー一覧</h2>
+      <tr class="company-lists"><th colspan="2">メンバー</th></tr>
+      <tr class='company-list'>
+        <th class="th-title"><%="名前" %></th><th><%="詳細" %></th>
+      </tr>
+      <% @users.each do |user| %>
+      <tr class="list", id="list">
+        <td><%= user.name %></td>
+        <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(user.id), class: "appt-red-btn" %></td>
+      </tr>
+      <% end %>
+    </table>
+    <%end%>
+  </div>
+
+<%# チェックリスト %>
+  <div class="admin-check">
+    <h2 class="admin-show-title">チェックリスト<%= link_to 'リスト追加', new_check_path, class: "check-new-btn", id: "btn2" %></h2>
+   
+    <% unless  @mychecks.length == 0 %>
+    <table class='table-lists' >
+      <h2 class="my-list">自分が登録したチェックリスト</h2>
+      <tr class="company-lists"><th colspan="2">チェックリスト</th></tr>
+      <tr class='company-list'>
+        <th class="th-title"><%="タイトル" %></th><th><%="編集" %></th>
+      </tr>
+      <% @mychecks.each do |check| %>
+      <tr class="list", id="list">
+        <td><%= check.title %></td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_check_path(check.id), class: "appt-red-btn" %></td>
+      </tr>
+      <% end %>
+    </table>
+    <%end%>
+  </div>
+
+</div>
+  <%= render "shared/footer" %>
+</div>
