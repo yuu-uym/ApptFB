@@ -114,3 +114,12 @@ table th, table td {
   font-size: 3vmin;
   margin-bottom: 20px;
 }
+
+.m-comment{
+  padding: 8px 19px;
+  margin-top: 10px;
+  color: #2c2c2f;
+  
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+}

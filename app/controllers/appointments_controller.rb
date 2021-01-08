@@ -34,6 +34,11 @@ class AppointmentsController < ApplicationController
     redirect_to action: :new if @appointment.user_id != current_user.id 
   end
 
+  def show
+    @appointment = Appointment.find(params[:id])
+    redirect_to action: :new if @appointment.user_id != current_user.id 
+  end
+
   def update
     @appointment = Appointment.find(params[:id])
     if @appointment.update(appointment_params)

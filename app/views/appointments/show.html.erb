@@ -1,1 +1,67 @@
-詳細ページだよ
+<div class="relative">
+  <%= render "shared/header" %>
+
+  <div class="input-contents">  
+    <div class="input-main">
+      <h2 class="input-title"><%= @appointment.company %></h2>
+      <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
+
+      <%# アポ情報登録 %>
+      <div class="new-appt">
+        <div class="weight-bold-text">
+          約束日:
+          <%=  @appointment.appt_date %>
+        </div>
+      <div class="weight-bold-text">
+        結論:
+        <%= @appointment.result.name %>
+      </div>
+      <div class="weight-bold-text">
+        点数
+        <%= @appointment.score %>点
+      </div>
+      </div>
+
+      <%# チェックリスト %>
+      <table class='table-check'>
+        <tr class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
+        <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="点数" %></th></tr>
+        <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td></tr>
+        <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td></tr>
+        <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td></tr>
+        <tr><td><%= @appointment.check.item4%></td><td><%=@appointment.point4 %>点</td></tr>
+        <tr><td><%= @appointment.check.item5%></td><td><%=@appointment.point5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item6%></td><td><%=@appointment.point6 %>点</td></tr>
+        <tr><td><%= @appointment.check.item7%></td><td><%=@appointment.point7 %>点</td></tr>
+        <tr><td><%= @appointment.check.item8%></td><td><%=@appointment.point8 %>点</td></tr>
+        <tr><td><%= @appointment.check.item9%></td><td><%=@appointment.point9 %>点</td></tr>
+        <tr><td><%= @appointment.check.item10%></td><td><%=@appointment.point10 %>点</td></tr>
+        <tr><td><%= @appointment.check.item11%></td><td><%=@appointment.point11 %>点</td></tr>
+        <tr><td><%= @appointment.check.item12%></td><td><%=@appointment.point12 %>点</td></tr>
+        <tr><td><%= @appointment.check.item13%></td><td><%=@appointment.point13 %>点</td></tr>
+        <tr><td><%= @appointment.check.item14%></td><td><%=@appointment.point14 %>点</td></tr>
+        <tr><td><%= @appointment.check.item15%></td><td><%=@appointment.point15 %>点</td></tr>
+        <tr><td><%= @appointment.check.item16%></td><td><%=@appointment.point16 %>点</td></tr>
+        <tr><td><%= @appointment.check.item17%></td><td><%=@appointment.point17 %>点</td></tr>
+        <tr><td><%= @appointment.check.item18%></td><td><%=@appointment.point18 %>点</td></tr>
+        <tr><td><%= @appointment.check.item19%></td><td><%=@appointment.point19 %>点</td></tr>
+        <tr><td><%= @appointment.check.item20%></td><td><%=@appointment.point20 %>点</td></tr>
+      </table>
+
+      <div class="weight-bold-text">
+        振り返り
+      <div>
+       <div class="m-comment"><%= @appointment.comment%></div>
+      </div>
+
+
+      <div class="input-btn-contents">
+        <%=link_to 'もどる', new_appointment_path, class:"back-btn" %>
+      </div>
+
+      <% end %> 
+    </div>
+  </div>
+
+  <%= render "shared/footer" %>
+</div>
