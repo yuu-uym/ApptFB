@@ -1,6 +1,7 @@
 class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :check
+  has_many :evaluations
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :result, optional: true

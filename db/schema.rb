@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_24_091357) do
+ActiveRecord::Schema.define(version: 2021_01_08_090529) do
 
   create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_12_24_091357) do
     t.bigint "check_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "comment"
   end
 
   create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -69,6 +70,34 @@ ActiveRecord::Schema.define(version: 2020_12_24_091357) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_checks_on_user_id"
+  end
+
+  create_table "evaluations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "point1"
+    t.integer "point2"
+    t.integer "point3"
+    t.integer "point4"
+    t.integer "point5"
+    t.integer "point6"
+    t.integer "point7"
+    t.integer "point8"
+    t.integer "point9"
+    t.integer "point10"
+    t.integer "point11"
+    t.integer "point12"
+    t.integer "point13"
+    t.integer "point14"
+    t.integer "point15"
+    t.integer "point16"
+    t.integer "point17"
+    t.integer "point18"
+    t.integer "point19"
+    t.integer "point20"
+    t.bigint "user_id"
+    t.bigint "appointment_id"
+    t.string "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
