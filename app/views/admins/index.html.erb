@@ -21,10 +21,10 @@
     <%end%>
   </div>
 
-
 <%# チェックリスト %>
   <div class="admin-check">
-    <h2 class="admin-show-title">登録済みチェックリスト一覧</h2>
+    <h2 class="admin-show-title">チェックリスト<%= link_to 'リスト追加', new_check_path, class: "check-new-btn", id: "btn2" %></h2>
+   
     <% unless  @mychecks.length == 0 %>
     <table class='table-lists' >
       <h2 class="my-list">自分が登録したチェックリスト</h2>
