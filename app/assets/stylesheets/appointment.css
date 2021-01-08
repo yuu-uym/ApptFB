@@ -19,6 +19,10 @@
 .appt_content{
   height: 30px;
 }
+.appt_comment{
+  width: 100%;
+  height: 20vh;
+}
 
 .appt-input-btn{
   background-color: #335495;
