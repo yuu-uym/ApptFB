@@ -104,3 +104,9 @@ table th, table td {
 .member{
   padding: 10vmin 2vmin;
 }
+
+.member-title{
+  text-align: center;
+  font-size: 3vmin;
+  margin-bottom: 20px;
+}
