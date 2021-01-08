@@ -100,3 +100,7 @@ table th, table td {
 .company-lists-sub{
   background-color: #d9e3eb;
 }
+
+.member{
+  padding: 10vmin 2vmin;
+}
