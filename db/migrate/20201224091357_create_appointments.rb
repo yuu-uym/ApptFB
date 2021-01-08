@@ -27,6 +27,7 @@ class CreateAppointments < ActiveRecord::Migration[6.0]
       t.integer :point20
       t.bigint :user_id
       t.bigint :check_id
+      t.string :comment
       t.timestamps
     end
   end
