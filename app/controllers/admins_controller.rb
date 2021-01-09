@@ -17,7 +17,6 @@ class AdminsController < ApplicationController
     @appointment2 = Appointment.where(result_id: 2, user_id: @user.id ).order(appt_date: "DESC")
     @appointment3 = Appointment.where(result_id: 3, user_id: @user.id ).order(appt_date: "DESC")
     @appointment4 = Appointment.where(result_id: 4, user_id: @user.id ).order(appt_date: "DESC")
-
   end
 
   private
