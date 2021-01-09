@@ -13,10 +13,9 @@ class EvaluationsController < ApplicationController
   end
 
   def create
-    binding.pry
     @evaluation = Evaluation.new(evaluation_params)
     @evaluation.save
-    redirect_to root_path
+    redirect_to "/admins/#{@evaluation.appointment.user.id}"
   end
 
   private
