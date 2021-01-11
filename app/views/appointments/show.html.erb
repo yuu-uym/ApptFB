@@ -50,7 +50,7 @@
        <div class="weight-bold-text">
        上長コメント
        </div>
-      <div class="m-comment"><%=  @evaluation.comment%></div>
+      <div class="m-comment"><% unless @evaluation.nil? %><%=  @evaluation.comment%><%end%></div>
       </div>
       
       <div class="input-btn-contents">
