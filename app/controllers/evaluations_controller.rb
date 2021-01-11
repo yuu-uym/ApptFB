@@ -8,7 +8,7 @@ class EvaluationsController < ApplicationController
     @mychecks = current_user.checks
   end
 
-  def new
+  def edit
     
     @appointment = Appointment.find(params[:appointment_id])
     @evaluation = Evaluation.find_by(appointment_id:@appointment.id)
@@ -16,10 +16,16 @@ class EvaluationsController < ApplicationController
   end
 
   def create
-    @evaluation = Evaluation.new(evaluation_params)
-    @evaluation.save
-    redirect_to "/admins/#{@evaluation.appointment.user.id}"
+    @evaluation = Evaluation.find_or_initialize_by(appointment_id: evaluation_params[:appointment_id])
+    if @evaluation.new_record?
+      @evaluation = Evaluation.new(evaluation_params)
+      @evaluation.save!
+       redirect_to "/admins/#{@evaluation.appointment.user.id}"
+    else
+      @evaluation.update(evaluation_params)
+      redirect_to "/admins/#{@evaluation.appointment.user.id}"
   end
+end
 
   private
   def admin_user

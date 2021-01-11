@@ -18,7 +18,7 @@
         <td><%= appointment1.result.name if appointment1.result %></td>
         <td><%= appointment1.score %>点</td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment1.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), new_appointment_evaluation_path(appointment1.id), class: "appt-red-btn" %></td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment1.id), class: "appt-red-btn" %></td>
       </tr>
       <% end %>
       <%# 受注済みアポ %>
@@ -30,7 +30,7 @@
         <td><%= appointment2.result.name if appointment2.result %></td>
         <td><%= appointment2.score %>点</td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment2.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), new_appointment_evaluation_path(appointment2.id), class: "appt-red-btn" %></td>     </tr>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment2.id), class: "appt-red-btn" %></td>     </tr>
       <% end %>
       <%# 失注アポ %>
       <tr class="company-lists-sub"><th colspan="6">失注</th></tr>
@@ -41,7 +41,7 @@
         <td><%= appointment3.result.name if appointment3.result %></td>
         <td><%= appointment3.score %>点</td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment3.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), new_appointment_evaluation_path(appointment3.id), class: "appt-red-btn" %></td>        </td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment3.id), class: "appt-red-btn" %></td>        </td>
       </tr>
       <% end %>
       <%# 検討中アポ %>
@@ -53,7 +53,7 @@
         <td><%= appointment4.result.name if appointment4.result %></td>
         <td><%= appointment4.score %>点</td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment4.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), new_appointment_evaluation_path(appointment4.id), class: "appt-red-btn" %></td>        </td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment4.id), class: "appt-red-btn" %></td>        </td>
       </tr>
       <% end %>
     </table>
