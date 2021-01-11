@@ -12,7 +12,7 @@ class EvaluationsController < ApplicationController
     
     @appointment = Appointment.find(params[:appointment_id])
     @evaluation = Evaluation.find_by(appointment_id:@appointment.id)
-    
+
   end
 
   def create
