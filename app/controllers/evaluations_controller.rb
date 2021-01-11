@@ -24,8 +24,17 @@ class EvaluationsController < ApplicationController
     else
       @evaluation.update(evaluation_params)
       redirect_to "/admins/#{@evaluation.appointment.user.id}"
+    end
   end
-end
+
+  def update
+    @evaluation = Evaluation.find_or_initialize_by(appointment_id: evaluation_params[:appointment_id])
+    if @evaluation.update(evaluation_params)
+      redirect_to "/admins/#{@evaluation.appointment.user.id}"
+    else
+      render :edit
+    end
+  end
 
   private
   def admin_user
