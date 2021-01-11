@@ -19,28 +19,28 @@
 
       <%# チェックリスト %>
       <table class='table-check'>
-        <tr class='check-list-title'><th colspan="2"><%= @appointment.check.title%></th></tr>
-        <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="点数" %></th></tr>
-        <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td></tr>
-        <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td></tr>
-        <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td></tr>
-        <tr><td><%= @appointment.check.item4%></td><td><%=@appointment.point4 %>点</td></tr>
-        <tr><td><%= @appointment.check.item5%></td><td><%=@appointment.point5 %>点</td></tr>
-        <tr><td><%= @appointment.check.item6%></td><td><%=@appointment.point6 %>点</td></tr>
-        <tr><td><%= @appointment.check.item7%></td><td><%=@appointment.point7 %>点</td></tr>
-        <tr><td><%= @appointment.check.item8%></td><td><%=@appointment.point8 %>点</td></tr>
-        <tr><td><%= @appointment.check.item9%></td><td><%=@appointment.point9 %>点</td></tr>
-        <tr><td><%= @appointment.check.item10%></td><td><%=@appointment.point10 %>点</td></tr>
-        <tr><td><%= @appointment.check.item11%></td><td><%=@appointment.point11 %>点</td></tr>
-        <tr><td><%= @appointment.check.item12%></td><td><%=@appointment.point12 %>点</td></tr>
-        <tr><td><%= @appointment.check.item13%></td><td><%=@appointment.point13 %>点</td></tr>
-        <tr><td><%= @appointment.check.item14%></td><td><%=@appointment.point14 %>点</td></tr>
-        <tr><td><%= @appointment.check.item15%></td><td><%=@appointment.point15 %>点</td></tr>
-        <tr><td><%= @appointment.check.item16%></td><td><%=@appointment.point16 %>点</td></tr>
-        <tr><td><%= @appointment.check.item17%></td><td><%=@appointment.point17 %>点</td></tr>
-        <tr><td><%= @appointment.check.item18%></td><td><%=@appointment.point18 %>点</td></tr>
-        <tr><td><%= @appointment.check.item19%></td><td><%=@appointment.point19 %>点</td></tr>
-        <tr><td><%= @appointment.check.item20%></td><td><%=@appointment.point20 %>点</td></tr>
+        <tr class='check-list-title'><th colspan="4"><%= @appointment.check.title%></th></tr>
+        <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="自己採点" %></th><th><%="上長採点" %></th><th><%="差分" %></th></tr>
+        <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td><td><%=@evaluation.point1 %>点</td><td><%if @evaluation.point1.to_i > @appointment.point1.to_i%><%= @evaluation.point1.to_i - @appointment.point1.to_i%><% else%><%=@appointment.point1.to_i -  @evaluation.point1.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td><td><%=@evaluation.point2 %>点</td><td><%if @evaluation.point2.to_i > @appointment.point2.to_i%><%= @evaluation.point2.to_i - @appointment.point2.to_i%><% else%><%=@appointment.point2.to_i -  @evaluation.point2.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td><td><%=@evaluation.point3 %>点</td><td><%if @evaluation.point3.to_i > @appointment.point3.to_i%><%= @evaluation.point3.to_i - @appointment.point3.to_i%><% else%><%=@appointment.point3.to_i -  @evaluation.point3.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item4%></td><td><%=@appointment.point4 %>点</td><td><%=@evaluation.point4 %>点</td><td><%if @evaluation.point4.to_i > @appointment.point4.to_i%><%= @evaluation.point4.to_i - @appointment.point4.to_i%><% else%><%=@appointment.point4.to_i -  @evaluation.point4.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item5%></td><td><%=@appointment.point5 %>点</td><td><%=@evaluation.point5 %>点</td><td><%if @evaluation.point5.to_i > @appointment.point5.to_i%><%= @evaluation.point5.to_i - @appointment.point5.to_i%><% else%><%=@appointment.point5.to_i -  @evaluation.point5.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item6%></td><td><%=@appointment.point6 %>点</td><td><%=@evaluation.point6 %>点</td><td><%if @evaluation.point6.to_i > @appointment.point6.to_i%><%= @evaluation.point6.to_i - @appointment.point6.to_i%><% else%><%=@appointment.point6.to_i -  @evaluation.point6.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item7%></td><td><%=@appointment.point7 %>点</td><td><%=@evaluation.point7 %>点</td><td><%if @evaluation.point7.to_i > @appointment.point7.to_i%><%= @evaluation.point7.to_i - @appointment.point7.to_i%><% else%><%=@appointment.point7.to_i -  @evaluation.point7.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item8%></td><td><%=@appointment.point8 %>点</td><td><%=@evaluation.point8 %>点</td><td><%if @evaluation.point8.to_i > @appointment.point8.to_i%><%= @evaluation.point8.to_i - @appointment.point8.to_i%><% else%><%=@appointment.point8.to_i -  @evaluation.point8.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item9%></td><td><%=@appointment.point9 %>点</td><td><%=@evaluation.point9 %>点</td><td><%if @evaluation.point9.to_i > @appointment.point9.to_i%><%= @evaluation.point9.to_i - @appointment.point9.to_i%><% else%><%=@appointment.point9.to_i -  @evaluation.point9.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item10%></td><td><%=@appointment.point10 %>点</td><td><%=@evaluation.point10 %>点</td><td><%if @evaluation.point10.to_i > @appointment.point10.to_i%><%= @evaluation.point10.to_i - @appointment.point10.to_i%><% else%><%=@appointment.point10.to_i -  @evaluation.point10.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item11%></td><td><%=@appointment.point11 %>点</td><td><%=@evaluation.point11 %>点</td><td><%if @evaluation.point11.to_i > @appointment.point11.to_i%><%= @evaluation.point11.to_i - @appointment.point11.to_i%><% else%><%=@appointment.point11.to_i -  @evaluation.point11.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item12%></td><td><%=@appointment.point12 %>点</td><td><%=@evaluation.point12 %>点</td><td><%if @evaluation.point12.to_i > @appointment.point12.to_i%><%= @evaluation.point12.to_i - @appointment.point12.to_i%><% else%><%=@appointment.point12.to_i -  @evaluation.point12.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item13%></td><td><%=@appointment.point13 %>点</td><td><%=@evaluation.point13 %>点</td><td><%if @evaluation.point13.to_i > @appointment.point13.to_i%><%= @evaluation.point13.to_i - @appointment.point13.to_i%><% else%><%=@appointment.point13.to_i -  @evaluation.point13.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item14%></td><td><%=@appointment.point14 %>点</td><td><%=@evaluation.point14 %>点</td><td><%if @evaluation.point14.to_i > @appointment.point14.to_i%><%= @evaluation.point14.to_i - @appointment.point14.to_i%><% else%><%=@appointment.point14.to_i -  @evaluation.point14.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item15%></td><td><%=@appointment.point15 %>点</td><td><%=@evaluation.point15 %>点</td><td><%if @evaluation.point15.to_i > @appointment.point15.to_i%><%= @evaluation.point15.to_i - @appointment.point15.to_i%><% else%><%=@appointment.point15.to_i -  @evaluation.point15.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item16%></td><td><%=@appointment.point16 %>点</td><td><%=@evaluation.point16 %>点</td><td><%if @evaluation.point16.to_i > @appointment.point16.to_i%><%= @evaluation.point16.to_i - @appointment.point16.to_i%><% else%><%=@appointment.point16.to_i -  @evaluation.point16.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item17%></td><td><%=@appointment.point17 %>点</td><td><%=@evaluation.point17 %>点</td><td><%if @evaluation.point17.to_i > @appointment.point17.to_i%><%= @evaluation.point17.to_i - @appointment.point17.to_i%><% else%><%=@appointment.point17.to_i -  @evaluation.point17.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item18%></td><td><%=@appointment.point18 %>点</td><td><%=@evaluation.point18 %>点</td><td><%if @evaluation.point18.to_i > @appointment.point18.to_i%><%= @evaluation.point18.to_i - @appointment.point18.to_i%><% else%><%=@appointment.point18.to_i -  @evaluation.point18.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item19%></td><td><%=@appointment.point19 %>点</td><td><%=@evaluation.point19 %>点</td><td><%if @evaluation.point19.to_i > @appointment.point19.to_i%><%= @evaluation.point19.to_i - @appointment.point19.to_i%><% else%><%=@appointment.point19.to_i -  @evaluation.point19.to_i%><%end%>点</td></tr>
+        <tr><td><%= @appointment.check.item20%></td><td><%=@appointment.point20 %>点</td><td><%=@evaluation.point20 %>点</td><td><%if @evaluation.point20.to_i > @appointment.point20.to_i%><%= @evaluation.point20.to_i - @appointment.point20.to_i%><% else%><%=@appointment.point20.to_i -  @evaluation.point20.to_i%><%end%>点</td></tr>
       </table>
 
       <div class="weight-bold-text">
