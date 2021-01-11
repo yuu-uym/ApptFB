@@ -4,8 +4,7 @@
   <div class="input-contents">  
     <div class="input-main">
       <h2 class="input-title"><%= @appointment.company %></h2>
-      <%= form_with model: @appointment, url: appointment_path, local: true do |f| %>
-
+   
       <%# アポ情報登録 %>
       <div class="new-appt">
         <div class="weight-bold-text">
@@ -51,17 +50,13 @@
        <div class="weight-bold-text">
        上長コメント
        </div>
-      <div class="m-comment"><%= @appointment.comment%></div>
+      <div class="m-comment"><%=  @evaluation.comment%></div>
       </div>
       
-      
-
-
       <div class="input-btn-contents">
         <%=link_to 'もどる', :back, class:"back-btn" %>
       </div>
 
-      <% end %> 
     </div>
   </div>
 

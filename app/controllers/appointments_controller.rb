@@ -35,10 +35,8 @@ class AppointmentsController < ApplicationController
   end
 
   def show
-    
     @appointment = Appointment.find(params[:id])
-    @evaluation = Evaluation.new
-    @evaluations = @appointment.evaluations
+    @evaluation = Evaluation.find_by(appointment_id:@appointment.id)
   end
 
   def update
