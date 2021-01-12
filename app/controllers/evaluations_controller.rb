@@ -18,17 +18,17 @@ class EvaluationsController < ApplicationController
     if @evaluation.new_record?
       @evaluation = Evaluation.new(evaluation_params)
       @evaluation.save!
-       redirect_to root_path
+       redirect_to "/admins/#{@evaluation.appointment.user.id}"
     else
       @evaluation.update(evaluation_params)
-      redirect_to root_path
+      redirect_to "/admins/#{@evaluation.appointment.user.id}"
     end
   end
 
   def update
     @evaluation = Evaluation.find_or_initialize_by(appointment_id: evaluation_params[:appointment_id])
     if @evaluation.update(evaluation_params)
-      redirect_to root_path
+      redirect_to "/admins/#{@evaluation.appointment.user.id}"
     else
       render :edit
     end
