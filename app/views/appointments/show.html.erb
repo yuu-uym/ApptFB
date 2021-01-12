@@ -21,7 +21,7 @@
       <table class='table-check'>
         <tr class='check-list-title'><th colspan="4"><%= @appointment.check.title%></th></tr>
         <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="自己採点" %></th><th><%="上長採点" %></th><th><%="差分" %></th></tr>
-        <% unless @appointment.point1.nil? || @evaluation.point1.nil?%>
+        <% unless @appointment.point1.nil? && @evaluation.point1.nil?%>
         <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td><td><%=@evaluation.point1 %>点</td><td><%if @evaluation.point1.to_i > @appointment.point1.to_i%><%= @evaluation.point1.to_i - @appointment.point1.to_i%><% else%><%=@appointment.point1.to_i -  @evaluation.point1.to_i%><%end%>点</td></tr>
         <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td><td><%=@evaluation.point2 %>点</td><td><%if @evaluation.point2.to_i > @appointment.point2.to_i%><%= @evaluation.point2.to_i - @appointment.point2.to_i%><% else%><%=@appointment.point2.to_i -  @evaluation.point2.to_i%><%end%>点</td></tr>
         <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td><td><%=@evaluation.point3 %>点</td><td><%if @evaluation.point3.to_i > @appointment.point3.to_i%><%= @evaluation.point3.to_i - @appointment.point3.to_i%><% else%><%=@appointment.point3.to_i -  @evaluation.point3.to_i%><%end%>点</td></tr>
