@@ -1,5 +1,5 @@
 class EvaluationsController < ApplicationController
-  before_action :admin_user
+  
   protect_from_forgery :except => [:create, :update]
 
   def index
@@ -37,9 +37,7 @@ class EvaluationsController < ApplicationController
   end
 
   private
-  def admin_user
-    redirect_to(root_path) unless current_user.admin?
-  end
+
 
   def evaluation_params
     params.require(:evaluation)
