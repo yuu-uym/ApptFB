@@ -1,5 +1,6 @@
 class EvaluationsController < ApplicationController
   before_action :admin_user
+  protect_from_forgery :except => [:create, :update]
 
   def index
     @users = User.all.order("created_at DESC")
