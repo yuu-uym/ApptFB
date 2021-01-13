@@ -4,7 +4,7 @@
   <div class="input-contents">  
     <div class="input-main">
       <h2 class="input-title"><%= @appointment.company %></h2>
-      <%= form_with model: @evaluation, url: appointment_evaluation_path(appointment_id:@appointment.id, evaluation_id:@evaluation.id), local: true do |f| %>
+      <%= form_with model: @evaluation, url: appointment_evaluation_path, local: true do |f| %>
 
       <div class="new-appt">
         チェック項目

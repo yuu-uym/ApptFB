@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'appointments#index'
+  get 'appointments/:id/evaluations/:id', to: 'admins#{@evaluation.appointment.user.id}'
   resources :checks
   resources :admins, only: [:index, :show]
   resources :appointments do
