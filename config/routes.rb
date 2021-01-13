@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'appointments#index'
-  post 'appointments/:id/evaluations/:id', to: 'admins#create'
+  post 'appointments/:id/evaluations/:id', to: 'evaluations#create'
   resources :checks
   resources :admins, only: [:index, :show]
   resources :appointments do
