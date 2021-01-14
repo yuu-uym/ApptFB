@@ -15,7 +15,7 @@ class ChecksController < ApplicationController
   def create
     @check = Check.new(check_params)
     if @check.save
-      redirect_to root_path
+      redirect_to admins_path
     else
       render :new
     end
