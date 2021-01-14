@@ -39,6 +39,14 @@ class ChecksController < ApplicationController
     @check = Check.find(params[:id])
   end
 
+  def destroy
+    @check = Check.find(params[:id])
+    if @check.user_id == current_user.id
+       @check.destroy
+        redirect_to admins_path
+    end
+  end
+
   private
   def check_params
     params.require(:check).permit(:title, :item1, :item2, :item3, :item4, :item5, :item6, :item7, :item8, :item9, :item10, :item11, :item12, :item13, :item14, :item15, :item16, :item17, :item18, :item19, :item20).merge(user_id: current_user.id)

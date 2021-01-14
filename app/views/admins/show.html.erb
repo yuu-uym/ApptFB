@@ -53,11 +53,11 @@
         <td><%= appointment4.result.name if appointment4.result %></td>
         <td><%= appointment4.score %>点</td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment4.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment4.id), class: "appt-red-btn" %></td>        </td>
+        <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_evaluation_path(appointment4.id), class: "appt-red-btn" %></td>
       </tr>
       <% end %>
     </table>
-
+ 
   </div>
   <%= render "shared/footer" %>
 </div>
