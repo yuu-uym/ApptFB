@@ -46,7 +46,7 @@
         <td><%= appointment1.score %>点</td>
         <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment1.id), class: "appt-red-btn" %></td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment1.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment1.id), method: :delete, class: "delete-btn"%></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment1.id), method: :delete, class: "delete-btn",data: { confirm: '削除しますか？' } %></td>
       </tr>
       <% end %>
       <%# 受注済みアポ %>
@@ -59,7 +59,7 @@
         <td><%= appointment2.score %>点</td>
         <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment2.id), class: "appt-red-btn" %></td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment2.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment2.id), method: :delete, class: "delete-btn"%></td>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment2.id), method: :delete, class: "delete-btn",data: { confirm: '削除しますか？' } %></td>
       </tr>
       <% end %>
       <%# 失注アポ %>
@@ -72,7 +72,7 @@
         <td><%= appointment3.score %>点</td>
         <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment3.id), class: "appt-red-btn" %></td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment3.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment3.id), method: :delete, class: "delete-btn"%>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment3.id), method: :delete, class: "delete-btn",data: { confirm: '削除しますか？' } %>
         </td>
       </tr>
       <% end %>
@@ -86,7 +86,7 @@
         <td><%= appointment4.score %>点</td>
         <td><%= link_to image_tag('pen.jpg', :size => '20x20' ), edit_appointment_path(appointment4.id), class: "appt-red-btn" %></td>
         <td><%= link_to image_tag('eye.jpg', :size => '20x20' ), appointment_path(appointment4.id), class: "appt-red-btn" %></td>
-        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment4.id), method: :delete, class: "delete-btn"%>
+        <td><%= link_to image_tag('gomi.jpg', :size => '20x20' ), appointment_path(appointment4.id), method: :delete, class: "delete-btn",data: { confirm: '削除しますか？' } %>
         </td>
       </tr>
       <% end %>
