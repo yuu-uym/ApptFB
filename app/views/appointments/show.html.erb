@@ -21,26 +21,26 @@
         <tr class='check-list-title'><th colspan="4"><%= @appointment.check.title%></th></tr>
         <tr class='check-list'><th class="th-title"><%="チェック項目" %></th><th><%="自己採点" %></th><th><%="上長採点" %></th><th><%="差分" %></th></tr>
         <% unless @appointment.nil?%>
-        <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point1 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point2 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point3 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item4%></td><td><%=@appointment.point4 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point4 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item5%></td><td><%=@appointment.point5 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point5 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item6%></td><td><%=@appointment.point6 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point6 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item7%></td><td><%=@appointment.point7 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point7 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item8%></td><td><%=@appointment.point8 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point8 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item9%></td><td><%=@appointment.point9 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point9 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item10%></td><td><%=@appointment.point10 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point10 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item11%></td><td><%=@appointment.point11 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point11 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item12%></td><td><%=@appointment.point12 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point12 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item13%></td><td><%=@appointment.point13 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point13 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item14%></td><td><%=@appointment.point14 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point14 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item15%></td><td><%=@appointment.point15 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point15 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item16%></td><td><%=@appointment.point16 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point16 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item17%></td><td><%=@appointment.point17 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point17 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item18%></td><td><%=@appointment.point18 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point18 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item19%></td><td><%=@appointment.point19 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point19 %><%end%>点</td><td>点</td></tr>
-        <tr><td><%= @appointment.check.item20%></td><td><%=@appointment.point20 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point20 %><%end%>点</td><td>点</td></tr>
+        <tr><td><%= @appointment.check.item1%></td><td><%=@appointment.point1 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point1 %><%end%>点</td><td><%= def_point1 %>点</td></tr>
+        <tr><td><%= @appointment.check.item2%></td><td><%=@appointment.point2 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point2 %><%end%>点</td><td><%= def_point2 %>点</td></tr>
+        <tr><td><%= @appointment.check.item3%></td><td><%=@appointment.point3 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point3 %><%end%>点</td><td><%= def_point3 %>点</td></tr>
+        <tr><td><%= @appointment.check.item4%></td><td><%=@appointment.point4 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point4 %><%end%>点</td><td><%= def_point4 %>点</td></tr>
+        <tr><td><%= @appointment.check.item5%></td><td><%=@appointment.point5 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point5 %><%end%>点</td><td><%= def_point5 %>点</td></tr>
+        <tr><td><%= @appointment.check.item6%></td><td><%=@appointment.point6 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point6 %><%end%>点</td><td><%= def_point6 %>点</td></tr>
+        <tr><td><%= @appointment.check.item7%></td><td><%=@appointment.point7 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point7 %><%end%>点</td><td><%= def_point7 %>点</td></tr>
+        <tr><td><%= @appointment.check.item8%></td><td><%=@appointment.point8 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point8 %><%end%>点</td><td><%= def_point8 %>点</td></tr>
+        <tr><td><%= @appointment.check.item9%></td><td><%=@appointment.point9 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point9 %><%end%>点</td><td><%= def_point9 %>点</td></tr>
+        <tr><td><%= @appointment.check.item10%></td><td><%=@appointment.point10 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point10 %><%end%>点</td><td><%= def_point10 %>点</td></tr>
+        <tr><td><%= @appointment.check.item11%></td><td><%=@appointment.point11 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point11 %><%end%>点</td><td><%= def_point11 %>点</td></tr>
+        <tr><td><%= @appointment.check.item12%></td><td><%=@appointment.point12 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point12 %><%end%>点</td><td><%= def_point12 %>点</td></tr>
+        <tr><td><%= @appointment.check.item13%></td><td><%=@appointment.point13 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point13 %><%end%>点</td><td><%= def_point13 %>点</td></tr>
+        <tr><td><%= @appointment.check.item14%></td><td><%=@appointment.point14 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point14 %><%end%>点</td><td><%= def_point14 %>点</td></tr>
+        <tr><td><%= @appointment.check.item15%></td><td><%=@appointment.point15 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point15 %><%end%>点</td><td><%= def_point15 %>点</td></tr>
+        <tr><td><%= @appointment.check.item16%></td><td><%=@appointment.point16 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point16 %><%end%>点</td><td><%= def_point16 %>点</td></tr>
+        <tr><td><%= @appointment.check.item17%></td><td><%=@appointment.point17 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point17 %><%end%>点</td><td><%= def_point17 %>点</td></tr>
+        <tr><td><%= @appointment.check.item18%></td><td><%=@appointment.point18 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point18 %><%end%>点</td><td><%= def_point18 %>点</td></tr>
+        <tr><td><%= @appointment.check.item19%></td><td><%=@appointment.point19 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point19 %><%end%>点</td><td><%= def_point19 %>点</td></tr>
+        <tr><td><%= @appointment.check.item20%></td><td><%=@appointment.point20 %>点</td><td><% unless @evaluation.nil?%><%=@evaluation.point20 %><%end%>点</td><td><%= def_point20 %>点</td></tr>
         <%end%>
       </table>
 

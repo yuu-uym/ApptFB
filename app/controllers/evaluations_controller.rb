@@ -56,5 +56,6 @@ class EvaluationsController < ApplicationController
    .merge(user_id: current_user.id,appointment_id:params[:appointment_id])  
   end
 
-end
 
+
+end
