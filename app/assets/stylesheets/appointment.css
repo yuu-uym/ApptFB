@@ -119,7 +119,8 @@ table th, table td {
   padding: 8px 19px;
   margin-top: 10px;
   color: #2c2c2f;
-  
+  font-size: 2vmin;
   border-top: solid 5px #5989cf;
   border-bottom: solid 5px #5989cf;
+  white-space: pre-wrap;
 }
