@@ -1,7 +1,8 @@
 <div class="relative">
   <%= render "shared/header" %>
 <div class="admin-contents">
-<%# ユーザー情報 %>
+
+    <%# ユーザー情報 %>
   <div class="admin-user">
     <h2 class="admin-show-title">メンバー情報</h2>
     <% unless  @mychecks.length == 0 %>
@@ -21,7 +22,7 @@
     <%end%>
   </div>
 
-<%# チェックリスト %>
+  <%# チェックリスト %>
   <div class="admin-check">
     <h2 class="admin-show-title">チェックリスト<%= link_to 'リスト追加', new_check_path, class: "check-new-btn", id: "btn2" %></h2>
    

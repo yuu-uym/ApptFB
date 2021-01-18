@@ -5,16 +5,16 @@
     <div class="input-main">
       <h2 class="input-title"><%= @appointment.company %></h2>
    
-      <%# アポ情報登録 %>
+      <%# アポ情報 %>
       <div class="new-appt">
         <div class="weight-bold-text">
           約束日:
           <%=  @appointment.appt_date %>
         </div>
-      <div class="weight-bold-text">
-        点数
-        <%= @appointment.score %>点
-      </div>
+        <div class="weight-bold-text">
+          点数
+          <%= @appointment.score %>点
+        </div>
       </div>
 
       <table class='table-check'>
@@ -46,12 +46,11 @@
 
       <div class="weight-bold-text">
         振り返り
-      <div>
-       <div class="m-comment"><%= @appointment.comment%></div>
-       <div class="weight-bold-text">
-       上長コメント
-       </div>
-      <div class="m-comment"><% unless @evaluation.nil? %><%=  @evaluation.comment%><%end%></div>
+        <div class="m-comment"><%= @appointment.comment%></div>
+        <div class="weight-bold-text">
+        上長コメント
+        </div>
+        <div class="m-comment"><% unless @evaluation.nil? %><%=  @evaluation.comment%><%end%></div>
       </div>
       
       <div class="input-btn-contents">
