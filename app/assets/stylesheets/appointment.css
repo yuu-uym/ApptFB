@@ -125,3 +125,8 @@ table th, table td {
   border-bottom: solid 5px #5989cf;
   white-space: pre-wrap;
 }
+
+@media (max-width: 750px) {
+  .br-pc { display:none; }
+  .br-sp { display:block; }
+}
