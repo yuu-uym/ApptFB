@@ -22,6 +22,7 @@ function appointment() {
     <td></td>
     <td>点</td>
     <td><a href="/appointments/${item.id}/edit"><img src="pen.jpg"></a></td>
+    <td><a href="/appointments/${item.id}/"><img src="eye.jpg"></a></td>
     <td><a data-method="delete" href="/appointments/${item.id}"><img src="gomi.jpg"></a></td> 
     </tr>
     </table>
