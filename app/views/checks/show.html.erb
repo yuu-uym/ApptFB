@@ -6,6 +6,7 @@
       <h2 class="input-title">チェックリスト内容確認</h2>
       <%= form_with model: @check, url: check_path, local: true do |f| %>
 
+      <%# チェックリスト %>
       <table class='table-check'>
         <tr class='check-list-title'><th colspan="2"><%=@check.title%></th></tr>
         <tr class='check-list'><th><%="No." %></th><th><%="チェック項目" %></th></tr>

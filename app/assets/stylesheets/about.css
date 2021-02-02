@@ -4,7 +4,6 @@
   background-image: url('top.jpg');
   height: 20vh;
 }
-/* トップページ上部 */
 
 /* トップページ中段 */
 .service-title{
@@ -24,8 +23,7 @@
   background-color: rgb(244, 250, 253);
 }
 
-/* トップページ中段 */
-
+/* 使い方 */
 .how-to{
   width: calc(100vw - 30vw);
   background-size: cover;
@@ -63,4 +61,3 @@
 .explanation{
   font-size: 3vmin ;
 }
-/* トップページ下段 */
